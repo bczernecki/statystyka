@@ -1,0 +1,81 @@
+# Rozkłady teoretyczne
+PDF - funkcja gęstości prawdopodobieństwa oznaczana zazwyczaj mała literą
+CDF - dystrybuanta rozkładu oznaczana zazwycza wielką literą
+
+## Rozkład Gauss'a
+$$
+f_{\mu ,\sigma }(x)={1 \over \sigma {\sqrt {2\pi }}}\,\exp \left({\frac {-(x-\mu)^{2}}{2\sigma ^{2}}}\right)
+$$
+$$
+P(X\leq x)=\int \limits _{-\infty }^{x}{\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-(x-\mu )^{2} \over (2\sigma ^{2})}\,dx
+$$
+
+
+
+```{r echo=FALSE}
+rnorm1000 = rnorm(1000, 0, 1)
+hist(rnorm1000, probability = TRUE, main = "N(0, 1)", xlab = "X", ylab = "PDF", xlim = c(-4, 4))
+curve(dnorm(x, mean(rnorm1000), sd(rnorm1000)), add = T, lwd=2, col = 2)
+#x <- seq(7, 11, len = 100)
+#y <- dnorm(x, mean(dane), sd(dane))
+#polygon(c(x[1], x, x[100]), c(0, y, 0), col = rgb(1,0,0,0.7), border = NA)
+#curve(dnorm(x, mean(dane), sd(dane)), add=T, lwd=2)
+```
+
+Powyżej przykładowy histogram dla próby o *n=1000* wraz gęstością prawdopodobieństwa rozkładu normalnego standaryzowanego N($\mu = 0$, $\sigma = 1$) zwanego rozkładem Z.
+
+
+
+## Rozkład t-Studenta
+$$
+P(t,n)={\frac {\Gamma ({\frac {n+1}{2}})}{\Gamma ({\frac {n}{2}}){\sqrt {n\pi }}}}\left(1+{\frac {t^{2}}{n}}\right)^{-{\frac {n+1}{2}}}
+$$
+gdzie $\Gamma (x)$ to funkcja Gamma. $t$ jest kwantylem rozkładu, natomiast $n$ to liczba stopni swobody.
+
+
+## Rozkład Bernouli'ego
+$$
+P(k;n,p)=P(X=k)={n \choose k}p^{k}(1-p)^{n-k}
+$$
+$$
+\binom {n}{k}={\frac {n!}{k!(n-k)!}}
+$$
+$$
+F(k;n,p)=\Pr(X\leq k)=\sum _{i=0}^{k}{n \choose i}p^{i}(1-p)^{n-i}
+$$
+
+Za pomocą tego rozkładu można obliczyć prawdopodobieństwo _k_ sukcesów w _n_ próbach znając prawdopodobieńswo sukcesu _p_ w pojedynczej próbie.
+
+Przykładowo jeżeli p = 0.34 to prawdopodobieństwo 5 sukcesów w 10 próbach wynosi `r round(dbinom(5, 10, 0.34), digits = 3)`. 
+
+Graficzna reprezentacja PDF wygląda jak na poniższym rysunku. Dystrybuanta tego rozkładu pozwala nam odpowiadac na pytania z cyklu: _Jakie jest prawdopodobieństo, że sukcesów będzie więcej niż 5?_. Wówczas musimy dodać wartości PDF od 0 do 5 sukcesów, a następnie uzyskaną sumę odjąc od 1. W tym wypadku wartość ta wynosi `r round(pbinom(5, 10, 0.34, lower.tail = F), digits = 3)`.
+```{r echo=F}
+barplot(dbinom(0:10, 10, 0.34), names=0:10, col="orange", 
+        xlab = "k",
+        ylab = "PDF",
+        main = "P(k, n=10, p=0.34)",
+        ylim = c(0, 0.3))
+box(lwd = 2)
+
+```
+
+## Rozkład Poisson'a
+$$
+P(X=x) = \frac{\mu^xe^{-\mu}}{x!} \quad \text{dla} \quad x = 0, 1, 2..., 
+$$
+
+Ten rozkład teoretyzcny również może posłużyć w analizie zjawisk dyskretnych. 
+Przykładowo, jeżeli średnio w sezonie letnim notowane jest 7.8 dni z burzą, można określić np. prawdopodobieństwo wystapienia ponad 12 burz i wynosi ono `r round(ppois(12, 7.8, lower.tail = F), digits = 3) `
+.
+```{r echo=F}
+barplot(dpois(0:20, 7.8), names=0:20, col="orange", 
+        xlab = "k",
+        ylab = "PDF",
+        main = "P(k, mu = 7.8)",
+        ylim = c(0, 0.3))
+box(lwd = 2)
+```
+
+## Zadania
+
+[ĆWICZENIE 4](pdfs/cw4-rozklad_gaussa_bernouliego_poissona.pdf)

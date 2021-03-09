@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Korelacja i asocjacja | Metody statystyczne w hydrologii i klimatologii</title>
+  <meta name="description" content="3 Korelacja i asocjacja | Metody statystyczne w hydrologii i klimatologii" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Korelacja i asocjacja | Metody statystyczne w hydrologii i klimatologii" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Korelacja i asocjacja | Metody statystyczne w hydrologii i klimatologii" />
+  
+  
+  
+
+<meta name="author" content="(07-MSHK-HMiK1-DU)" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="wykresy-statystyczne.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Wprowadzenie</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#kwestie-organizacyjne"><i class="fa fa-check"></i>Kwestie organizacyjne</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zalecana-literatura"><i class="fa fa-check"></i>Zalecana literatura</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ksiazki"><i class="fa fa-check"></i>Książki</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zasoby-www-i-pozostae-zroda"><i class="fa fa-check"></i>Zasoby WWW i pozostałe źródła:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#program-zajec"><i class="fa fa-check"></i>Program zajęć:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html"><i class="fa fa-check"></i><b>1</b> Statystyki opisowe</a><ul>
+<li class="chapter" data-level="1.1" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#skale-pomiarowe-dane-ilosciowe"><i class="fa fa-check"></i><b>1.1</b> Skale pomiarowe (dane ilościowe)</a></li>
+<li class="chapter" data-level="1.2" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#miary-poozenia-tendencji-centralnej"><i class="fa fa-check"></i><b>1.2</b> <strong>Miary położenia (tendencji centralnej)</strong></a></li>
+<li class="chapter" data-level="1.3" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#miary-dyspersji"><i class="fa fa-check"></i><b>1.3</b> <strong>Miary dyspersji </strong></a></li>
+<li class="chapter" data-level="1.4" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#pozostae-uzyteczne-funkcje-statystyczne"><i class="fa fa-check"></i><b>1.4</b> <strong>Pozostałe użyteczne funkcje statystyczne</strong></a><ul>
+<li class="chapter" data-level="" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#wybrane-wzory"><i class="fa fa-check"></i>Wybrane wzory</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html"><i class="fa fa-check"></i><b>2</b> Wykresy statystyczne</a><ul>
+<li class="chapter" data-level="2.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-eksploracyjne"><i class="fa fa-check"></i><b>2.1</b> Wykresy eksploracyjne</a></li>
+<li class="chapter" data-level="2.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-komunikacyjne"><i class="fa fa-check"></i><b>2.2</b> Wykresy komunikacyjne</a></li>
+<li class="chapter" data-level="2.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-w-r"><i class="fa fa-check"></i><b>2.3</b> Wykresy w R</a></li>
+<li class="chapter" data-level="2.4" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2"><i class="fa fa-check"></i><b>2.4</b> ggplot2</a></li>
+<li class="chapter" data-level="2.5" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---pierwszy-wykres"><i class="fa fa-check"></i><b>2.5</b> ggplot2 - pierwszy wykres</a></li>
+<li class="chapter" data-level="2.6" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---podstawowe-informacje"><i class="fa fa-check"></i><b>2.6</b> ggplot2 - podstawowe informacje</a></li>
+<li class="chapter" data-level="2.7" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---podstawowe-sownictwo-skadnia"><i class="fa fa-check"></i><b>2.7</b> ggplot2 - podstawowe słownictwo / składnia</a></li>
+<li class="chapter" data-level="2.8" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zbior-danych"><i class="fa fa-check"></i><b>2.8</b> Zbiór danych</a></li>
+<li class="chapter" data-level="2.9" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram"><i class="fa fa-check"></i><b>2.9</b> Histogram</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#domyslny-silnik-graficzny-r"><i class="fa fa-check"></i><b>2.9.1</b> Domyślny silnik graficzny R</a></li>
+<li class="chapter" data-level="2.9.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram-w-ggplot2"><i class="fa fa-check"></i><b>2.9.2</b> Histogram w ggplot2</a></li>
+<li class="chapter" data-level="2.9.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#gestosc-prawdopodobienstwa-ggplot2"><i class="fa fa-check"></i><b>2.9.3</b> Gęstość prawdopodobieństwa ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#przyspieszamy---facet_-i-wykresy-miesieczne"><i class="fa fa-check"></i><b>2.10</b> Przyspieszamy - <code>facet_</code> i wykresy miesięczne</a></li>
+<li class="chapter" data-level="2.11" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-liniowy"><i class="fa fa-check"></i><b>2.11</b> Wykres liniowy</a></li>
+<li class="chapter" data-level="2.12" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-rozrzutu"><i class="fa fa-check"></i><b>2.12</b> Wykres rozrzutu</a><ul>
+<li class="chapter" data-level="2.12.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#dane-ilosciowe-i-jakosciowe-na-wykresach-rozrzutu"><i class="fa fa-check"></i><b>2.12.1</b> Dane ilościowe i jakościowe na wykresach rozrzutu</a></li>
+</ul></li>
+<li class="chapter" data-level="2.13" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-pudekowy-box-and-whisker-plots"><i class="fa fa-check"></i><b>2.13</b> Wykres pudełkowy (<em>box and whisker plots</em>)</a></li>
+<li class="chapter" data-level="2.14" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-supkowe"><i class="fa fa-check"></i><b>2.14</b> Wykresy słupkowe</a></li>
+<li class="chapter" data-level="2.15" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-strukturalne"><i class="fa fa-check"></i><b>2.15</b> Wykresy strukturalne</a></li>
+<li class="chapter" data-level="2.16" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wskazowki"><i class="fa fa-check"></i><b>2.16</b> Wskazówki</a><ul>
+<li class="chapter" data-level="2.16.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#modyfikacja-wykresow"><i class="fa fa-check"></i><b>2.16.1</b> Modyfikacja wykresów</a></li>
+</ul></li>
+<li class="chapter" data-level="2.17" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zapisywanie-wykresow"><i class="fa fa-check"></i><b>2.17</b> Zapisywanie wykresów</a></li>
+<li class="chapter" data-level="2.18" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zadania"><i class="fa fa-check"></i><b>2.18</b> Zadania</a></li>
+<li class="chapter" data-level="2.19" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#inne"><i class="fa fa-check"></i><b>2.19</b> Inne</a><ul>
+<li class="chapter" data-level="2.19.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#kilka-porad"><i class="fa fa-check"></i><b>2.19.1</b> Kilka porad</a></li>
+<li class="chapter" data-level="2.19.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#dodatkowe-zroda-informacji"><i class="fa fa-check"></i><b>2.19.2</b> Dodatkowe źródła informacji</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html"><i class="fa fa-check"></i><b>3</b> Korelacja i asocjacja</a><ul>
+<li class="chapter" data-level="3.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-korelacji-liniowej-pearsona-r_xy"><i class="fa fa-check"></i><b>3.1</b> Współczynnik korelacji liniowej Pearsona (<span class="math inline">\(r_{xy}\)</span>)</a></li>
+<li class="chapter" data-level="3.2" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#trening---zgadnij-wartosc-korelacji"><i class="fa fa-check"></i><b>3.2</b> Trening - zgadnij wartość korelacji</a></li>
+<li class="chapter" data-level="3.3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-determinacji-r2"><i class="fa fa-check"></i><b>3.3</b> Współczynnik determinacji <span class="math inline">\(r^2\)</span></a></li>
+<li class="chapter" data-level="3.4" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-korelacji-rang-spearmana-r_s"><i class="fa fa-check"></i><b>3.4</b> Współczynnik korelacji rang Spearman’a <span class="math inline">\(r_s\)</span></a></li>
+<li class="chapter" data-level="3.5" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#obliczenia-wspoczynnika-korelacji-w-r"><i class="fa fa-check"></i><b>3.5</b> Obliczenia współczynnika korelacji w R</a></li>
+<li class="chapter" data-level="3.6" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#nao-a-temperatura-powietrza-i-opady-atmosferyczne-w-polsce"><i class="fa fa-check"></i><b>3.6</b> NAO a temperatura powietrza i opady atmosferyczne w Polsce</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#dane"><i class="fa fa-check"></i><b>3.6.1</b> Dane</a></li>
+<li class="chapter" data-level="3.6.2" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zadanie-1"><i class="fa fa-check"></i><b>3.6.2</b> Zadanie 1</a></li>
+<li class="chapter" data-level="3.6.3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zadanie-2"><i class="fa fa-check"></i><b>3.6.3</b> Zadanie 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#warto-pamietac---zaozenia-analizy-korelacji"><i class="fa fa-check"></i><b>3.7</b> Warto pamiętać - Założenia analizy korelacji</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zalecane-materiay-uzupeniajace"><i class="fa fa-check"></i><b>3.7.1</b> zalecane materiały uzupełniające:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Metody statystyczne w hydrologii i klimatologii</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="korelacja-i-asocjacja" class="section level1">
+<h1><span class="header-section-number">3</span> Korelacja i asocjacja</h1>
+<blockquote>
+<p>“Celem analizy korelacji jest stwierdzenie, czy między badanymi zmiennymi zachodzą jakieś zależności,jaka jest ich siła, jaka jest ich postać i kierunek” (Nowak-Brzezińska)</p>
+</blockquote>
+<div id="wspoczynnik-korelacji-liniowej-pearsona-r_xy" class="section level2">
+<h2><span class="header-section-number">3.1</span> Współczynnik korelacji liniowej Pearsona (<span class="math inline">\(r_{xy}\)</span>)</h2>
+<p>W naukach atmosferycznych współczynnik korelacji Pearsona jest jedną z najczęściej stosowanych miar współzależności dwóch mierzalnych cech.
+Należy pamiętać, że korelacja to jeszcze nie zależność, a prawidłowe wyznaczenia wartości współczynnika korelacji obarczone jest szeregiem założeń metodycznych.</p>
+<p>Współczynnik korelacji liniowej Pearsona <span class="math inline">\((r_xy)\)</span> jest miarą powiązania pomiędzy dwiema lub większą liczbą zmiennych i wyznaczamy go za pomocą równania:</p>
+<p><span class="math display">\[
+r_{xy} = \frac{\sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})}{\sqrt{\sum_{i=1}^n (x_i - \overline{x})^2} \sqrt{\sum_{i=1}^n (y_i - \overline{y})^2}}
+\]</span>
+gdzie:</p>
+<ul>
+<li><span class="math inline">\(x_i\)</span> i <span class="math inline">\(y_i\)</span> – oznaczają odpowiednio wartości zmiennych <span class="math inline">\(x\)</span> i <span class="math inline">\(y\)</span></li>
+<li><span class="math inline">\(\overline{x}\)</span>, <span class="math inline">\(\overline{y}\)</span> – średnie wartości tych zmiennych</li>
+</ul>
+<p>Współczynniki korelacji przyjmują wartości z przedziału od -1 do +1, gdzie poszczególne wartości oznaczają:</p>
+<ul>
+<li>-1,00 – doskonałą korelację ujemną</li>
+<li>+1,00 – doskonałą korelacją dodatnią</li>
+<li>0,00 – brak korelacji</li>
+</ul>
+<p>W rozbiciu na przedziały wartości (bezwzględnych) można siłę związków opisać słownie:</p>
+<ul>
+<li>poniżej 0,2 – brak związku liniowego pomiędzy badanymi cechami,</li>
+<li>0,2 - 0,4 – zależność liniowa wyraźna, lecz niska,</li>
+<li>0,4 - 0,7 – zależność liniowa umiarkowana,</li>
+<li>0,7 – 0,9 – zależność liniowa znacząca,</li>
+<li>powyżej 0,9 – zależność liniowa bardzo silna</li>
+</ul>
+<p>W przypadku zaobserwowania korelacji dwóch zmiennych (x i y) możliwe są następujące sytuacje:</p>
+<ul>
+<li>x wpływa na (powoduje) y</li>
+<li>x wpływa na y</li>
+<li>z wpływa na x i y</li>
+<li>x wpływa na y i y wpływa na x</li>
+<li>x wpływa na z; z wpływa na y</li>
+<li>nie istnieje relacja przyczynowo-skutkowa pomiędzy zmienną x i y (korelacja jest przypadkowa)</li>
+</ul>
+<p>Najczęściej zależność pomiędzy zmiennymi najlepiej przedstawić na wykresach punktowych (zwanych także diagramami korelacyjnymi). Zdarza się bowiem, że po obliczeniu współczynnika korelacji zbliżonego do 0,00 może istnieć zależność pomiędzy analizowanymi parametrami, jednak może mieć ona charakter nieliniowy.</p>
+<div class="figure">
+<img src="korelacja.png" alt="Wykresy korelacyjne [(c) Kubiczek 2016]" />
+<p class="caption">Wykresy korelacyjne [(c) Kubiczek 2016]</p>
+</div>
+<p>Tak jak wspomniano - relatywnie wysokie wartości współczynnika korelacji
+same w sobie nie muszą oznaczać wysokiej siły oddziaływania związków przyczynowo-skutkowych. (“correlation does not mean causation”). Warto sprawdzić
+np. <a href="http://www.tylervigen.com/spurious-correlations" class="uri">http://www.tylervigen.com/spurious-correlations</a> aby przekonać się o możliwych
+paradoksach, do których może prowadzić spłycona analiza korelacji.</p>
+</div>
+<div id="trening---zgadnij-wartosc-korelacji" class="section level2">
+<h2><span class="header-section-number">3.2</span> Trening - zgadnij wartość korelacji</h2>
+<p><a href="https://gallery.shinyapps.io/correlation_game/" class="uri">https://gallery.shinyapps.io/correlation_game/</a></p>
+</div>
+<div id="wspoczynnik-determinacji-r2" class="section level2">
+<h2><span class="header-section-number">3.3</span> Współczynnik determinacji <span class="math inline">\(r^2\)</span></h2>
+<p>Współczynniki determinacji (<span class="math inline">\(r^2\)</span>) będący kwadratem współczynnika korelacji informuje o ilości wyjaśnianej wariancji (zmienności) zmiennej wyjaśnianej (<span class="math inline">\(y\)</span>) przez zmienną niezależną (<span class="math inline">\(x\)</span>). Przykładowo, jeśli współczynnik korelacji <span class="math inline">\(r\)</span> wynosi 0.8, to 64% zmienności analizowanego zjawiska wyjaśnia badana zmienna.</p>
+<p>Warto wspomnieć, że “brakującą” część wyjaśnianej wariancji nazywa się <em>współczynnikiem indeterminacji</em>. W powyższym przykładzie było by to 36%, których nie wyjaśnia zmienna <span class="math inline">\(x\)</span>, lub inaczej mówiąc wpływ na 36% zmienności danego zjawiska mają inne czynniki niż te które są reprezentowane przez zmienną niezależną.</p>
+</div>
+<div id="wspoczynnik-korelacji-rang-spearmana-r_s" class="section level2">
+<h2><span class="header-section-number">3.4</span> Współczynnik korelacji rang Spearman’a <span class="math inline">\(r_s\)</span></h2>
+<p>Dla elementów nieciągłych lub dla danych nie mających postaci liczbowej
+siłę związków można wyrazić współczynnikiem korelacji rang Spearmana (<span class="math inline">\(r_s\)</span>).</p>
+<p>Współczynnik korelacji Spearmana ma zastosowanie w przypadkach gdzie dane mogą
+zostać uszeregowane według utworzonych lub istniejących rang (np. mały &lt; średni &lt; duży lub 1-50 &lt; 51-100 &lt; 101-150).</p>
+<p>W przypadku badań atmosferycznych współczynnik korelacji rang Spearmana stosuje się najczęściej do analizy opadów atmosferycznych (możliwe braki opadów) lub innych zjawisk o charakterze nieciągłym.</p>
+<p>Jeśli wszystkie rangi <span class="math inline">\(n\)</span> są oznaczone w postaci liczb całkowitych współczynnik korelacji Spearmana można obliczyć według poniższej formuły (gdzie <span class="math inline">\(d_i\)</span> to różnica pomiędzy rangami w próbie):</p>
+<p><span class="math display">\[
+      r_{s}=1-{\frac {6\sum d_{i}^{2}}{n(n^{2}-1)}}
+\]</span></p>
+</div>
+<div id="obliczenia-wspoczynnika-korelacji-w-r" class="section level2">
+<h2><span class="header-section-number">3.5</span> Obliczenia współczynnika korelacji w R</h2>
+<p>Wyznaczanie współczynnika korelacji w środowisku obliczeniowym R można skrócić do kilku kroków:</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Wczyt danych</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Wykres rozrzutu/wykres rozproszenia (np. za pomocą funkcji <code>plot()</code>) – musimy stwierdzić czy badany związek rzeczywiście najlepiej opisuje zależność liniowa</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>Obliczenie korelacji za pomocą funkcji <code>cor()</code>. Domyślnie jest obliczany współczynnik korelacji Pearsona (argument <code>method = &quot;pearson&quot;</code>). Można także zmienić na korelację Spearmana (argument <code>method = &quot;spearman&quot;</code>) i Tau-Kendalla (argument <code>method = &quot;kendall&quot;</code>).
+Przydatny może okazać się także argument <code>use = &quot;pairwise.complete.obs&quot;</code> jeśli w którymś ze zbiorów danych mamy obserwacje brakujące.</li>
+</ol>
+</blockquote>
+<p>Finalnie przykładowy kod można zapisać jako: <code>cor(zmienna1, zmienna2, method = &quot;pearson&quot;, use = &quot;pairwise.complete.obs&quot;)</code>. W analogiczny sposób można wyliczyć korelację dla macierzy lub ramki danych.</p>
+<blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Obliczenie istotności statystycznej - jeśli chcemy poznań stopien istotności statystycznej korelacji pomiędzy badanymi zmiennymi musimy użyć dodatkowo funkcji do testowania korelacji <code>cor.test()</code> (argumenty analogiczne jak w pkt. 3)</li>
+</ol>
+</blockquote>
+<p>W przypadku liczenia istotności statystycznej korelacji testujemy hipotezę zerową (<span class="math inline">\(H_0\)</span>) o tym że wartość korelacji wynosi 0. Najczęściej jako wartośc graniczną przyjmujemy <span class="math inline">\(p=0.05\)</span>. Jeśli <span class="math inline">\(p&lt;0.05\)</span> wówczas odrzucamy hipotezę zerową i przyjmujemy, że faktycznie uzyskana zależność nie jest dziełem przypadku. Szczegółowo procedura wyznaczania istotności statystycznej i jej znaczenie jest opisane pod koniec niniejszego rozdziału.</p>
+</div>
+<div id="nao-a-temperatura-powietrza-i-opady-atmosferyczne-w-polsce" class="section level2">
+<h2><span class="header-section-number">3.6</span> NAO a temperatura powietrza i opady atmosferyczne w Polsce</h2>
+<p>Na stronie <a href="https://www.cpc.ncep.noaa.gov/products/precip/CWlink/pna/norm.nao.monthly.b5001.current.ascii.table" class="uri">https://www.cpc.ncep.noaa.gov/products/precip/CWlink/pna/norm.nao.monthly.b5001.current.ascii.table</a> umieszczono miesięczne wartości indeksu Oscylacji Północnoatlantyckiej wg Hurrela. Porównajmy wpływ cyrkulacji nad Północnym Atlantykiem z wartościami (a) miesięcznymi temperaturami powietrza w Poznaniu (b) miesięcznymi sumami opadów atmosferycznych</p>
+<div id="dane" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Dane</h3>
+<p>Dostępne są na stronie: <a href="http://enwo.pl/student/nao_korelacje.RData" class="uri">http://enwo.pl/student/nao_korelacje.RData</a></p>
+<ul>
+<li>nao - miesięcze wartości indeksu NAO</li>
+<li>t2m - średnia miesięczna temperatura powietrza w Poznaniu</li>
+<li>rr - sumy miesięczne opadów w Poznaniu</li>
+<li>rr10 - liczba dni z opadem &gt; 10 mm</li>
+<li>rr20 - liczba dni z opadem &gt; 10 mm</li>
+</ul>
+</div>
+<div id="zadanie-1" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> Zadanie 1</h3>
+<ul>
+<li><p>Przeprowadź pełną procedurę obliczenia współczynnika korelacji Pearsona dla temperatury powietrza i oscylacji NAO w I, IV, VII i X. Kiedy siła związków jest największa? Czy wszystkie zdiagnozowane relacje są istotne statystycznie?</p></li>
+<li><p>Przeprowadź analogiczne postępowanie dla współczynników Pearsona i Spearmana w odniesieniu do sum opadów atmosferycznych (zamiast temperatury powietrza). Który ze współczynników osiąga wyższe wartości?</p></li>
+<li><p>Oblicz macierz korelacji pomiędzy NAO i temperaturą powietrza. Pamiętaj o usunięciu kolumny dla roku. Następnie sprawdź czy istnieją prawidłowości dotyczące przesunięcia czasowego korelacji pomiędzy analizowanymi procesami? Przydatne może być wykorzystanie funkcji <code>corrplot()</code> z pakietu o tej samej nazwie w różnej wersji zadeklarowanych argumentów:</p></li>
+</ul>
+<pre><code>## corrplot 0.84 loaded</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-2-2.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-2-3.png" width="672" /></p>
+</div>
+<div id="zadanie-2" class="section level3">
+<h3><span class="header-section-number">3.6.3</span> Zadanie 2</h3>
+<ul>
+<li>Na podstawie danych dostępnych w zbiorze <a href="http://www.enwo.pl/student/am8d.rda" class="uri">http://www.enwo.pl/student/am8d.rda</a> oblicz w jakim stopniu temperatura powietrza i prędkość wiatru w styczniu i w lipcu są związane ze średnim zapyleniem pyłem PM10.
+Ile procent <em>współczynnika indeterminacji</em> jest związane z innymi czynnikami meteorologicznymi lub działalnością człowieka?</li>
+</ul>
+</div>
+</div>
+<div id="warto-pamietac---zaozenia-analizy-korelacji" class="section level2">
+<h2><span class="header-section-number">3.7</span> Warto pamiętać - Założenia analizy korelacji</h2>
+<p>Wymagania odnośnie zmiennych
+powodują dużą ograniczoność/aplikacyjność jego stosowalność w naukach o Ziemi jest często ograniczona. Wymagania te odnosza się zarówno do rozkładu obu analizowanych zmiennych (powinien to być rozkład Gauss’a), jak równiez do “kształtu” relacji (liniowa).</p>
+<p>Kolejnym wymogiem jest brak obserwacji odstających, które moga w znacznym stopniu wypaczyć wynik. Przykładowo rozważmy dwie zmienne (A, B), obie o rozkładzie normalnym z korelacja bliską 0.</p>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>A teraz dodajmy POJEDYNCZĄ obserwację odstającą i powtórzmy całą procedurę</p>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Ze względu na fakt, ze współczynnik korelacji liniowej Pearsona to w zasadzie standaryzowana kowariancja, obecność obserwacji odstających skutkuje znacznym błędem estymacji parametru.</p>
+<p><em>Istotność statystyczna</em></p>
+<p>Wyobraźmy sobie, że wyjątkowo dysponujemy wglądem w populację generalną o liczebności 100 000. Zmienne, ktore nas interesują mają rozkład normalny i zostały wygenerowane losowo, tak więc wartość współczynnika korelacji liniowej Pearson’a wynosi 0, lub jest tej wartości bliska. Wykres rozrzutu moze wygladać nastepująco:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Zauważyć można znaczny <em>overplotting</em>, który utrudnia dostrzeżenie struktury/typu współzmiennośći, dlatego przy tak licznej próbie warto rozważyć inne metody prezentacji np. <em>hexbiny</em>:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Tutaj juz wyraźnie widać brak współzmienności.</p>
+<p>A teraz stańmy twarzą w twarz z sytuacją z jaką mamy zazwyczaj do czynienia, bo tak się niestety składa, że w Naukach o Ziemi najczęściej dysponujemy pojedynczą próbą o stosunkowo niewielkiej liczebności. Na przykład załóżmy, że nasza próba ma 50 elementów. Wylosujmy 500 takich prób i zobaczmy jak będzie wyglądał rozkład wartości współczynników korelacji Pearsona.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Jak widać zakres zmienności jest dosyć znaczny z wartościami minimalną i maksymalną wynoszącymi odpowiednio:-0.39, 0.43. Tak więc analizując populację generalną ze współczynnikiem korelacji między zmiennymi wynoszącym 0, możemy poprzez procedurę próbkowania otrzymać wartości korelacji zbliżone do +/-0.4.</p>
+<p>Analizując dostępne nam dane (pamiętajmy że mamy tylko jedną próbę, <em>ergo</em> nie jesteśmy w stanie określić ile wynosi prawdziwa wartości współczynnika korelacji - nie mamy przeciez wglądu w populację generalną) możemy jedynie przyjąc na wiarę, że nasz estymator współczynnika korelacji w poprawny sposób opisuje nam jego faktyczną wartość.</p>
+<p>Zaraz, zaraz… czy aby na pewno pozostaje nam tylko wiara?</p>
+<p>Na szczęście nie. Statystyka matematyczna, nazywana również wnioskowaniem statystycznym pozwala na ocenę otrzymanego przez nas współczynnika korelacji pod kątem tego, czy pochodzi z populacji generalnej o współczynniku korelacji wynoszącym zero.</p>
+<p><em>Procedura</em></p>
+<ol style="list-style-type: decimal">
+<li>Zakładamy hipotezę zerową (<span class="math inline">\(H_0\)</span>) o tym że wartość <span class="math inline">\(r\)</span> wynosi zero.</li>
+<li>Określamy również hipotezę alternatywną (<span class="math inline">\(H_1\)</span>) w naszym wypadku głoszącą, ze wartość <span class="math inline">\(r\neq 0\)</span></li>
+<li>Kolejnym krokiem jest określenie statystyki testowej (w tym wypadku <span class="math inline">\(t\)</span>) o znanym rozkładzie zerowym (czyli takim, kiedy <span class="math inline">\(H_0\)</span> jest prawdziwa)</li>
+<li>Obliczamy wartość statystyki testowej dla obliczonej przez nas wartości <span class="math inline">\(r\)</span>.</li>
+<li>Porównujemy ją z wartością krytyczną <span class="math inline">\(t_\alpha\)</span>, będącą kwantylem rokładu zerowego o określonym prawdopodobieństwie przekroczenia.</li>
+<li>Podejmujemy decyzję, czy mamy podstawy do odrzucenia <span class="math inline">\(H_0\)</span> (jeżeli <span class="math inline">\(|t| &gt; t_\alpha\)</span>) i stwierdzenia, że korelacja na określonym poziomie (zazwyczaj 0.05 - nazywanym błędem I-go rodzaju) jest istotna statystycznie.</li>
+</ol>
+<p>W praktyce jest to dosyć łatwe.</p>
+<ol style="list-style-type: decimal">
+<li>Obliczamy wartość statystyki testowej. Czyli np. jeżeli w naszym przypadku (dla n = 50) <span class="math inline">\(r=0,45\)</span> to wartość <span class="math inline">\(t\)</span> obliczamy z następującego wzoru:
+<span class="math display">\[
+t = \frac{r}{\sqrt{1-r^2}}\sqrt{n-2}
+\]</span></li>
+</ol>
+<p>i wynosi ona 3.4911442</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Nasza statystyka testowa na rozkład zerowy t-Studenta o <span class="math inline">\(n-2\)</span> stopniach swobody czyli wyglądający mniej więcej tak:
+<img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" /></li>
+</ol>
+<p>Jest on zadziwiająco zgodny z histogramem wartości <span class="math inline">\(t\)</span> obliczonych na podstawie 500 współczynników korelacji z 50 elementowych prób, które wcześniej wylosowaliśmy. Spójrzmy…</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Nasza wartość wynosząca 3.4911442 jest położona daleko w ogonie rozkładu zerowego statystyki testowej a więc jest mało prawdopodobne, że natkniemy się na nią jeżeli <span class="math inline">\(H_0\)</span> będzie prawdziwe. Można obliczyć to prawdopodobieństwo, ale zazwyczaj ograniczamy się do stwierdzenia, czy jest ono mniejsze od pewnej arbitralnie przyjętej wartości (najczęściej 0,05).</p>
+<p>Aby to stwierdzić musimy obliczyc wartość krytyczna kwantyla <span class="math inline">\(t_\alpha\)</span> o prawdopodobieństwie przekroczenia 0.025. Dlaczego nie 0.05? Cóż, jeżeli nasza hipoteza alternatywna jest skonstruowana następująco: <span class="math inline">\(H_1: r\neq 0\)</span> to musimy zastosowac test dwustronny a więc “odciąć” po 0.025 pola powierzchni pod funkcją gęstości prawdopodobieństwa po obu stronach rozkładu. Wówczas wartość krytyczna kwantyla wynosi: 2.0106348.</p>
+<p>Jak widać spełniona jest nierówność <span class="math inline">\(|t| &gt; t_\alpha\)</span> tak więc jesteśmy upoważnieni do odrzucenia <span class="math inline">\(H_0\)</span> na rzecz hipotezy alternatywnej <span class="math inline">\(H_1\)</span>, a nasza korelacja jest istotna statystycznie na poziomie istotności 0.05.</p>
+<div id="zalecane-materiay-uzupeniajace" class="section level3">
+<h3><span class="header-section-number">3.7.1</span> zalecane materiały uzupełniające:</h3>
+<p>Sobczyk M., 2003. Statystyka, strony 220–245</p>
+<p><a href="https://slideplayer.pl/slide/61882/" class="uri">https://slideplayer.pl/slide/61882/</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="wykresy-statystyczne.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

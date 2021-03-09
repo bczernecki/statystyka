@@ -1,0 +1,35 @@
+# Prawdopodobieństwo
+
+Według klasycznej definicji Laplace'a prawdopodobieństwo jest to iloraz liczby sukcesów oraz liczby prób w których sukcesy te mogły zostać osiągnięte. I tak np. jeżeli analizujemy 30 lat sezonów letnich ($30\cdot 92=2760$ dni) i w tym okresie burza wystąpiła na stacji X w $170$ dniach, to wówczas prawdopodobieństwo wystąpienia burzy w letni dzień na stacji X wynosi $170/2760=0,0616$ czyli 6,16\%. Można to formalnie zapisac nastepującym wzorem odnoszącym sie do faktycznego prawdopodobieństwa wystapienia zjawiska E oznaczonego jako $P(E)$.
+$$
+\mathrm{dla} \quad n \rightarrow \infty\quad P\left(\left|\frac{a}{n}-P(E)\right|\geq\varepsilon \right)\rightarrow 0  
+$$
+gdzie:
+$a$ jest liczbą sukcesów, $n$ liczbą prób, natomiast $\varepsilon$ jest dowolnie mała liczbą rzeczywistą\\
+
+wzór zaprezentowany powyżej obrazuje klasyczną definicję prawdopodobeństwa Laplace'a. Tego typu podejście nazywamy _częstościowym_.
+
+Wartości prawdopodobieństwa oscylują między 0 a 1 przy czym wartość 0 oznacza zdarzenie niemożliwe natomiast 1 zdarzenie pewne.
+
+## Zdarzenie elementarne vs zdarzenie złozone
+
+
+## Aksjomaty prawdopodobieństwa
+
+* Prawdopodobieństwo wystapienie jakiegokolwiek zdarzenie jest *nieujemne*
+* Prawdopodobieństwo zdarzenia złożonego obejmującego całą przestrzen zdarzen $S$ wynosi *1*
+* Prawdopodobieństwo wystapienia jednego *lub* innego ze zdarzeń *wzajemnie wykluczających* się jest sumą ich prawdopodobieństw indywidualnych
+
+## Właściwośći prawdopodobieństwa
+
+Wychodząc z aksjomatów można wysnuć kilka prawidłowości, które okazują się niezmiernie przydatne w analizach.
+ 
+
+
+## Prawdopodobieństwo warunkowe
+
+
+## Tabela kontyngencji
+
+## Zadania
+[ĆWICZENIE 3](pdfs/cw3-prawdopodobienstwo.pdf)

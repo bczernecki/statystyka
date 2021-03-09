@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Szereg rozdzielczy przedziałowy | Metody statystyczne w hydrologii i klimatologii</title>
+  <meta name="description" content="3 Szereg rozdzielczy przedziałowy | Metody statystyczne w hydrologii i klimatologii" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Szereg rozdzielczy przedziałowy | Metody statystyczne w hydrologii i klimatologii" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Szereg rozdzielczy przedziałowy | Metody statystyczne w hydrologii i klimatologii" />
+  
+  
+  
+
+<meta name="author" content="(07-MSHK-HMiK1-DU)" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="szereg-szczegoowy.html"/>
+<link rel="next" href="prawdopodobienstwo.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Informacje ogólne</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#kwestie-organizacyjne"><i class="fa fa-check"></i><b>1.1</b> Kwestie organizacyjne&quot;</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#zalecana-literatura"><i class="fa fa-check"></i><b>1.2</b> Zalecana literatura</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#ksiazki"><i class="fa fa-check"></i><b>1.2.1</b> Książki</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#zasoby-www-i-pozostae-zroda"><i class="fa fa-check"></i><b>1.2.2</b> Zasoby WWW i pozostałe źródła:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#program-zajec"><i class="fa fa-check"></i><b>1.3</b> Program zajęć:</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="szereg-szczegoowy.html"><a href="szereg-szczegoowy.html"><i class="fa fa-check"></i><b>2</b> Szereg szczegółowy</a><ul>
+<li class="chapter" data-level="2.1" data-path="szereg-szczegoowy.html"><a href="szereg-szczegoowy.html#wybrane-wzory"><i class="fa fa-check"></i><b>2.1</b> Wybrane wzory</a></li>
+<li class="chapter" data-level="2.2" data-path="szereg-szczegoowy.html"><a href="szereg-szczegoowy.html#zadania"><i class="fa fa-check"></i><b>2.2</b> Zadania</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html"><i class="fa fa-check"></i><b>3</b> Szereg rozdzielczy przedziałowy</a><ul>
+<li class="chapter" data-level="3.1" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html#wprowadzenie"><i class="fa fa-check"></i><b>3.1</b> Wprowadzenie</a></li>
+<li class="chapter" data-level="3.2" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html#wybrane-wzory-1"><i class="fa fa-check"></i><b>3.2</b> Wybrane wzory</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html#miary-dyspersji-klasyczne"><i class="fa fa-check"></i><b>3.2.1</b> Miary dyspersji (klasyczne)</a></li>
+<li class="chapter" data-level="3.2.2" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html#miary-dyspersji-pozycyjne"><i class="fa fa-check"></i><b>3.2.2</b> Miary dyspersji (pozycyjne)</a></li>
+<li class="chapter" data-level="3.2.3" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html#miary-asymetrii-klasyczne"><i class="fa fa-check"></i><b>3.2.3</b> Miary asymetrii (klasyczne)</a></li>
+<li class="chapter" data-level="3.2.4" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html#miary-asymetrii-pozycyjne"><i class="fa fa-check"></i><b>3.2.4</b> Miary asymetrii (pozycyjne)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html#miary-spaszczenia"><i class="fa fa-check"></i><b>3.2.5</b> Miary spłaszczenia</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="szereg-rozdzielczy-przedziaowy.html"><a href="szereg-rozdzielczy-przedziaowy.html#zadania-1"><i class="fa fa-check"></i><b>3.3</b> Zadania</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="prawdopodobienstwo.html"><a href="prawdopodobienstwo.html"><i class="fa fa-check"></i><b>4</b> Prawdopodobieństwo</a><ul>
+<li class="chapter" data-level="4.1" data-path="prawdopodobienstwo.html"><a href="prawdopodobienstwo.html#zdarzenie-elementarne-vs-zdarzenie-zozone"><i class="fa fa-check"></i><b>4.1</b> Zdarzenie elementarne vs zdarzenie złozone</a></li>
+<li class="chapter" data-level="4.2" data-path="prawdopodobienstwo.html"><a href="prawdopodobienstwo.html#aksjomaty-prawdopodobienstwa"><i class="fa fa-check"></i><b>4.2</b> Aksjomaty prawdopodobieństwa</a></li>
+<li class="chapter" data-level="4.3" data-path="prawdopodobienstwo.html"><a href="prawdopodobienstwo.html#wasciwosci-prawdopodobienstwa"><i class="fa fa-check"></i><b>4.3</b> Właściwośći prawdopodobieństwa</a></li>
+<li class="chapter" data-level="4.4" data-path="prawdopodobienstwo.html"><a href="prawdopodobienstwo.html#prawdopodobienstwo-warunkowe"><i class="fa fa-check"></i><b>4.4</b> Prawdopodobieństwo warunkowe</a></li>
+<li class="chapter" data-level="4.5" data-path="prawdopodobienstwo.html"><a href="prawdopodobienstwo.html#tabela-kontyngencji"><i class="fa fa-check"></i><b>4.5</b> Tabela kontyngencji</a></li>
+<li class="chapter" data-level="4.6" data-path="prawdopodobienstwo.html"><a href="prawdopodobienstwo.html#zadania-2"><i class="fa fa-check"></i><b>4.6</b> Zadania</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="rozkady-teoretyczne.html"><a href="rozkady-teoretyczne.html"><i class="fa fa-check"></i><b>5</b> Rozkłady teoretyczne</a><ul>
+<li class="chapter" data-level="5.1" data-path="rozkady-teoretyczne.html"><a href="rozkady-teoretyczne.html#rozkad-gaussa"><i class="fa fa-check"></i><b>5.1</b> Rozkład Gauss’a</a></li>
+<li class="chapter" data-level="5.2" data-path="rozkady-teoretyczne.html"><a href="rozkady-teoretyczne.html#rozkad-t-studenta"><i class="fa fa-check"></i><b>5.2</b> Rozkład t-Studenta</a></li>
+<li class="chapter" data-level="5.3" data-path="rozkady-teoretyczne.html"><a href="rozkady-teoretyczne.html#rozkad-bernouliego"><i class="fa fa-check"></i><b>5.3</b> Rozkład Bernouli’ego</a></li>
+<li class="chapter" data-level="5.4" data-path="rozkady-teoretyczne.html"><a href="rozkady-teoretyczne.html#rozkad-poissona"><i class="fa fa-check"></i><b>5.4</b> Rozkład Poisson’a</a></li>
+<li class="chapter" data-level="5.5" data-path="rozkady-teoretyczne.html"><a href="rozkady-teoretyczne.html#zadania-3"><i class="fa fa-check"></i><b>5.5</b> Zadania</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html"><i class="fa fa-check"></i><b>6</b> Wykresy statystyczne</a><ul>
+<li class="chapter" data-level="6.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram"><i class="fa fa-check"></i><b>6.1</b> Histogram</a></li>
+<li class="chapter" data-level="6.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#pudeko-z-wasami-box-and-whisker-plot"><i class="fa fa-check"></i><b>6.2</b> Pudełko z wąsami (Box-and-whisker plot)</a></li>
+<li class="chapter" data-level="6.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-liniowy"><i class="fa fa-check"></i><b>6.3</b> Wykres liniowy</a></li>
+<li class="chapter" data-level="6.4" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-strukturalne"><i class="fa fa-check"></i><b>6.4</b> Wykresy strukturalne</a></li>
+<li class="chapter" data-level="6.5" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-rozrzutu-xy"><i class="fa fa-check"></i><b>6.5</b> Wykresy rozrzutu (XY)</a></li>
+<li class="chapter" data-level="6.6" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zadania-4"><i class="fa fa-check"></i><b>6.6</b> Zadania</a></li>
+<li class="chapter" data-level="6.7" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wspoczynnik-korelacji-liniowej-pearsona-r_xy"><i class="fa fa-check"></i><b>6.7</b> Współczynnik korelacji liniowej Pearsona (<span class="math inline">\(r_{xy}\)</span>)</a></li>
+<li class="chapter" data-level="6.8" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wspoczynnik-korelacji-spearmana-r_s"><i class="fa fa-check"></i><b>6.8</b> Współczynnik korelacji Spearman’a <span class="math inline">\(r_s\)</span></a></li>
+<li class="chapter" data-level="6.9" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#miary-asocjacji"><i class="fa fa-check"></i><b>6.9</b> Miary Asocjacji</a><ul>
+<li class="chapter" data-level="6.9.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#tabele-kontyngencji"><i class="fa fa-check"></i><b>6.9.1</b> Tabele kontyngencji</a></li>
+<li class="chapter" data-level="6.9.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wspoczynniki-asocjacji-v-cramera-t-czupurowa-c-pearsona"><i class="fa fa-check"></i><b>6.9.2</b> Współczynniki asocjacji: V-Cramera, T-Czupurowa, C-Pearsona</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analiza-regresji.html"><a href="analiza-regresji.html"><i class="fa fa-check"></i><b>7</b> Analiza regresji</a><ul>
+<li class="chapter" data-level="7.1" data-path="analiza-regresji.html"><a href="analiza-regresji.html#podstawy-teoretyczne---metoda-najmniejszych-kwadratow"><i class="fa fa-check"></i><b>7.1</b> Podstawy teoretyczne - metoda najmniejszych kwadratów</a></li>
+<li class="chapter" data-level="7.2" data-path="analiza-regresji.html"><a href="analiza-regresji.html#estymacja-wspoczynnikow-rownania-regresji-prostej"><i class="fa fa-check"></i><b>7.2</b> Estymacja współczynników równania regresji prostej</a></li>
+<li class="chapter" data-level="7.3" data-path="analiza-regresji.html"><a href="analiza-regresji.html#istotnosc-statystyczna-modelu"><i class="fa fa-check"></i><b>7.3</b> Istotność statystyczna modelu</a></li>
+<li class="chapter" data-level="7.4" data-path="analiza-regresji.html"><a href="analiza-regresji.html#analiza-jakosci-modelu-regresji"><i class="fa fa-check"></i><b>7.4</b> Analiza jakości modelu regresji</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="przykadowe-zadania-egzaminacyjne.html"><a href="przykadowe-zadania-egzaminacyjne.html"><i class="fa fa-check"></i><b>8</b> Przykładowe zadania egzaminacyjne</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Metody statystyczne w hydrologii i klimatologii</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="szereg-rozdzielczy-przedziaowy" class="section level1">
+<h1><span class="header-section-number">3</span> Szereg rozdzielczy przedziałowy</h1>
+<p>Zanim rozpoczniemy zmagania z szeregiem rozdzielczym przedziałowym, zamieszczam krótkie graficzne podsumowanie typów/rodzajów szeregów statystycznych przygotowane przez Michała Kitowskiego
+<img src="pdfs/szeregi_stat.png" alt="Szeregi Statystyczne" /></p>
+<div id="wprowadzenie" class="section level2">
+<h2><span class="header-section-number">3.1</span> Wprowadzenie</h2>
+<p>Praca na szeregu szczegółowym jest z reguły utrudniona, ze względu na liczebność próby. Tak długo, dopóki pracujemy na stosunkowo niewielkich próbach możliwe są obliczenia “ręczne”, jednak dla prób większych (o ile nie posługujemy się oprogramowaniem np.: Excell, R, itp.) lepiej posłużyć sie szeregiem rozdzielczym przedziałowym.</p>
+<p>Każdy szereg szczegółowy można przekształcić w szereg rozdzielczy. Dokonując podziału zakresu zmienności naszej zmiennej na przedziały i określając liczebność przypadków w poszczególnych przedziałach.</p>
+<p>Imaginujmy sobie, że pracujemy na zbiorze o liczebności <span class="math inline">\(n=200\)</span> dotyczącym zmiennej <span class="math inline">\(A\)</span>.</p>
+<pre><code>##   [1]  3.82  2.06  4.60  9.60  3.18 -0.19  8.32  3.10  1.95  5.35  4.74
+##  [12]  5.57  4.96  6.16  6.07  3.91  2.33  4.57  3.14  5.61  4.25  4.16
+##  [23]  2.48  2.78  3.91  1.73  4.28  5.87  5.33  0.37  3.78  7.90  3.24
+##  [34]  7.77  4.29  2.60  5.71  2.59  3.45  1.32  3.60  2.85  2.03  2.69
+##  [45]  2.26  6.47  3.38  1.82  4.16  7.47  1.61  5.45  2.23  1.63  3.77
+##  [56]  5.19  3.81  3.42  2.90  3.97  4.93  3.02  5.81  4.17  3.06  3.61
+##  [67]  3.39  3.23  4.70  3.47  5.17  4.72  0.77  6.25  4.64  2.91  6.78
+##  [78]  0.55  7.04  4.87  8.49  6.67  5.21  5.90  5.56  4.75 -0.22  3.12
+##  [89]  6.49  6.52  3.22  6.77  2.86  2.06  7.26  3.58  2.18  2.96  4.87
+## [100]  3.49  0.90  6.42  3.43  4.08 -0.20  2.62  2.39  6.48  4.56  4.49
+## [111]  1.95  4.84  4.93  4.45  6.22  1.95  8.58  8.54  6.16  2.29  1.40
+## [122]  5.74  6.03  5.01  2.08  6.51  3.56  7.07  1.18  5.79  3.41  2.77
+## [133]  4.15  5.08  5.14  6.06  2.92  2.65  4.00  3.33  3.42 -1.25  4.34
+## [144]  8.32  7.44  5.71  6.78  1.61  4.20  2.88  2.49  4.71  6.71  1.44
+## [155]  4.49  5.65  5.55  1.69  0.42  3.88  6.86  4.61  4.08  3.39  4.71
+## [166]  3.31  4.46  4.27  4.84  3.33  4.90  1.59  4.79  3.97  3.09  3.63
+## [177]  3.26  3.70  3.15  8.62  6.22  4.52  1.72  6.05  7.67  2.14  1.94
+## [188]  8.54 -0.83  1.85  7.53  3.82  8.07  3.53  5.61  4.32  0.16  2.34
+## [199]  6.96  1.74</code></pre>
+<p>Obliczenia wartości średniej (wynoszącej w tym wypadku 4.15), nie wspominając o wariancji, odchyleniu standardowym czy też miarach skośności lub kurtozy byłyby w tym wypadku, delikatnie mówiąc, <em>męczące</em>. Ale można dokonac podziału tego zbioru na przedziały a wówczas obliczenia te staną się zdecydowanie mniej absorbujące.</p>
+<p>Liczba przedziałów powinna być dobrana <em>z głową</em>. W podręcznikach statystyki można dopatrzyć się przynajmniej kilku metod określania liczby przedziałów. Osobiście preferuję najprostszą z nich czyli <span class="math inline">\(\sqrt{n}\)</span>, gdzie <span class="math inline">\(n\)</span> to liczebność próby. Tak więc w naszym przypadku liczba przedziałów to 14.1421356.</p>
+<p>Nie należy się oczywiście zbytnio przywiązywać do liczb po przecinku… załóżmy więc, ze w naszym przypadku optymalna liczba przedziałów to 14 lub 15.
+Kolejnym krokiem jest określenie granic tych przedziałów i tutaj pomoże nam miara rozproszenia nazywaną <em>rozrzutem</em> lub <em>rozstępem</em>, czyli różnica między maksimum a minimum. Minimum i maksimum to odpowiednio -1.25, 9.6. A rozstęp wynosi 10.85. Czyli musimy tą wartości podzielic na np 14 (liczba przedziałów) - efekt: 0.775.</p>
+<p>Wynik jest mocno niepraktyczny. I właśnie w tym momencie nalezy użyć wspomnianej wcześniej <em>głowy</em>. Osobiście sprawdziłbym jeszcze ile wynosi wartość rozstępu podzielona przez 15 - 0.7233333 i krakowskim targiem uznałbym że rozpiętość przedziału, ktorej szukamy to 0.75 (pamiętajcie, że później nasza tabela przedstawiająca szereg rozdzielczy przedziałowy powinna sensownie się prezentować - czyli granice przedziałów powinny mieć wartości <em>mniej więcej okrągłe</em>).</p>
+<p>Kolejnym zagadnieniem, jest początek. Teoretycznie powinno się zacząć od minimum ale z punktu widzenia tworzenia przedziałów jest to niepraktyczne. W tym konkretnym wypadku sugeruję zacząc od <em>-1.5</em> i dodawać kolejno <em>0.7</em>. Czyli granice naszych przedziałów to odpowiednio -1.5, -0.75, 0, 0.75, 1.5, 2.25, 3, 3.75, 4.5, 5.25, 6, 6.75, 7.5, 8.25, 9, 9.75. Pamiętajcie, że o ile nie jest to sprecyzowane inaczej to przedziały są zawsze prawostronnie domknięte.</p>
+<p>Teraz pozostaje już tylko zliczyć liczbę wartośći w poszczególnych przedziałach i przedstawić ją jako szereg rozdzielczy.</p>
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 3.1: </span>Szereg rozdzielczy</caption>
+<thead>
+<tr class="header">
+<th align="left">Przedział</th>
+<th align="right"><span class="math inline">\(n_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(-1.5,-0.75]</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">(-0.75,0]</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">(0,0.75]</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">(0.75,1.5]</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="left">(1.5,2.25]</td>
+<td align="right">21</td>
+</tr>
+<tr class="even">
+<td align="left">(2.25,3]</td>
+<td align="right">21</td>
+</tr>
+<tr class="odd">
+<td align="left">(3,3.75]</td>
+<td align="right">32</td>
+</tr>
+<tr class="even">
+<td align="left">(3.75,4.5]</td>
+<td align="right">28</td>
+</tr>
+<tr class="odd">
+<td align="left">(4.5,5.25]</td>
+<td align="right">27</td>
+</tr>
+<tr class="even">
+<td align="left">(5.25,6]</td>
+<td align="right">16</td>
+</tr>
+<tr class="odd">
+<td align="left">(6,6.75]</td>
+<td align="right">17</td>
+</tr>
+<tr class="even">
+<td align="left">(6.75,7.5]</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="left">(7.5,8.25]</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="left">(8.25,9]</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td align="left">(9,9.75]</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>I tutaj kończy sie wstępna, nieco przydługa opowieść o tworzeniu szeregu rozdzielczego przedziałowego. Można ten szereg przedstawić za pomoca histogramu, obrazującego <em>rozkład empiryczny</em> naszej zmiennej <span class="math inline">\(A\)</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Na osi <em>Y</em> można również przedstawić udzial poszczeŋolnych przedziałów w postaci odsetka.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Histogram nie musi mieć rozdziałów o takiej samej rozpiętości(liczy się w zasadzie pole powierzchni dla wersji z <em>gęstością prawdopodibieństwa</em> na osi Y), aczkolwiek takowe sa najczęściaj stosowane.</p>
+<p>Wykorzystując przygotowany szereg rozdzielczy przedziałowy można dokonać wstępnej analizy danych z wykorzystaniem podstawowych miar statystycznych tzw. Eksploracyjnej Analizy Danych (<em>Exploratory Data Analysis</em>). Pozwoli nam ona na wstępne zorientowanie się, co w trawie piszczy (typ rozkładu, obecność braków danych, obserwacji odstających, skośność, itp.), zanim weźmiemy zamach z wykorzystaniem bardziej sążnistych metod statystycznych. W przypadku złego uwarunkowania danych źrodłowych, zamach taki skończy się wyrwaniem ręki ze stawu i kiepskimi rokowaniami na poprawę.</p>
+<p>CAŁĄ ANALIZĘ TRZEBA NIESTETY WYKONAĆ OD POCZĄTKU.</p>
+</div>
+<div id="wybrane-wzory-1" class="section level2">
+<h2><span class="header-section-number">3.2</span> Wybrane wzory</h2>
+<p>Średnia
+<span class="math display">\[
+\bar{x}=\frac{1}{n}\sum\limits_{1}^{k}x_in_i
+\]</span>
+gdzie:
+<span class="math inline">\(x_i\)</span> - środek przedziału
+<span class="math inline">\(n_i\)</span> - liczebność przedziału</p>
+<p>Dominanta
+<span class="math display">\[
+D=x_0+\frac{{n_0}-{n_{-1}}}{(n_0-n_{-1})+(n_0-n_{+1})}c_0
+\]</span>
+gdzie:</p>
+<p><span class="math inline">\(n_0\)</span> - liczebność przedziału mody, <span class="math inline">\(n_{-1}\)</span> - liczebność przedziału poprzedzającego przedział mody, <span class="math inline">\(n_{+1}\)</span>- liczebność przedziału następującego po przedziale mody, <span class="math inline">\(x_0\)</span> - dolna granica przedziału najliczniejszego, <span class="math inline">\(c_0\)</span> - rozpiętość przedziału najliczniejszego</p>
+<p>Mediana
+<span class="math display">\[
+Me=x_0+[0,5(n+1)-N_{x_{i-1}}]\frac{c_0}{n_0}
+\]</span>
+gdzie:</p>
+<p><span class="math inline">\(x_0\)</span> – dolna granica przedziału mediany, <span class="math inline">\(n_0\)</span> – liczebność przedziału mediany, <span class="math inline">\(c_0\)</span> – rozpiętość przedziału mediany, <span class="math inline">\(N_{x_{i-1}}\)</span> – liczebność szeregu skumulowanego do przedziału poprzedzającego ten, zawierający medianę</p>
+<p>Kwartyl 1 &amp; 3 (oznaczenia symboli analogicznie do <span class="math inline">\(Me\)</span>)</p>
+<p><span class="math display">\[
+Q1=x_0+[0,25(n+1)-N_{x_{i-1}}]\frac{c_0}{n_0}
+\]</span>
+<span class="math display">\[
+Q3=x_0+[0,75(n+1)-N_{x_{i-1}}]\frac{c_0}{n_0}
+\]</span></p>
+<div id="miary-dyspersji-klasyczne" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Miary dyspersji (klasyczne)</h3>
+<p>Odchylenie standardowe
+<span class="math display">\[
+s=\sqrt{\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^2n_i}{n-1}}
+\]</span></p>
+<p>Odchylenie przeciętne
+<span class="math display">\[
+d=\frac{\sum\limits_{i=1}^{k}\left| x_i-\bar{x}\right|n_i}{n}
+\]</span></p>
+<p>Współczynnik zmienności
+<span class="math display">\[
+V(d)=\frac{d}{\bar{x}}100
+\]</span></p>
+</div>
+<div id="miary-dyspersji-pozycyjne" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Miary dyspersji (pozycyjne)</h3>
+<p>Rozstęp
+<span class="math display">\[
+R=x_{max}-x_{min}
+\]</span></p>
+<p>Rozstęp decylowy
+<span class="math display">\[
+R(D) = D_9-D_1
+\]</span></p>
+<p>Rozstęp kwartylowy (zwany również rozstępem międzykwartylowym)
+<span class="math display">\[
+R(Q) = Q_3-Q_1
+\]</span></p>
+<p>Odchylenie ćwiartkowe
+<span class="math display">\[
+Q = \frac{Q_3-Q_1}{2}
+\]</span></p>
+</div>
+<div id="miary-asymetrii-klasyczne" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Miary asymetrii (klasyczne)</h3>
+<p>Asymetria &amp; Moment 3-ci względny
+<span class="math display">\[\mu_3=\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^3n_i}{n}\]</span> <span class="math display">\[\alpha_3=\frac{\mu_3}{s^3}\]</span></p>
+<p>Wartośći dodatnie oznaczają asymetrię dodatnią, natomiast ujemne… no wiadomo jaką.</p>
+<p>Współczynnik asymetrii
+<span class="math display">\[
+A(\bar{x})=\frac{\bar{x}-D}{s}
+\]</span></p>
+</div>
+<div id="miary-asymetrii-pozycyjne" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Miary asymetrii (pozycyjne)</h3>
+<p>Współczynnik skośności (w oparciu o kwartyle)
+<span class="math display">\[
+A(Q)=\frac{(Q_3-Me)-(Me-Q_1)}{Q_3-Q_1}=\frac{(Q_3-Me)-(Me-Q_1)}{(Q_3-Me)+(Me-Q_1)}
+\]</span></p>
+<p>Współczynnik skośności (w oparciu o decyle)
+<span class="math display">\[
+A(D)=\frac{(D_9-Me)-(Me-D_1)}{D_9-D_1}=\frac{(D_9-Me)-(Me-D_1)}{(D_9-Me)+(Me-D_1)}
+\]</span></p>
+</div>
+<div id="miary-spaszczenia" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Miary spłaszczenia</h3>
+<p>Nalezy bezwzględnie pamiętać, że spłaszczenie rozkładu jest w tym wypadku określane względem rozkładu normalnego. Rozkład <em>mezokurtyczny</em> ma takie spłaszczenie jak rozkład Gauss’a, rozkład <em>platykurtyczny</em> jest bardziej spłaszczony, natomiast <em>leptokurtyczny</em> bardziej szpiczasty. Wartości 4-tego momentu względnego &gt; 0 oznaczają większą koncentrację wartości wokół średniej (rozkład jest bardziej szpiczasty - <em>leptokurtyczny</em>). <span class="math inline">\(\alpha_4&lt;0\)</span> wskazuje na spłaszczenie rokładu (<em>platykurtyczny</em>). Wartości w pobliżu 0 oznaczają rozkład <em>mezokurtyczny</em> o spłaszczeniu tożsamym z rozkładem wzorcowym - w tym wypadku rozkładem Gauss’a (normalnym).</p>
+<p>Kurtoza &amp; Moment 4-ty względny
+<span class="math display">\[\mu_4=\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^4n_i}{n}\]</span> <span class="math display">\[\alpha_4=\frac{\mu_4}{s^4}-3\]</span></p>
+</div>
+</div>
+<div id="zadania-1" class="section level2">
+<h2><span class="header-section-number">3.3</span> Zadania</h2>
+<p><a href="pdfs/cw2-szereg_rprzedzialowy.pdf">ĆWICZENIE 2</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="szereg-szczegoowy.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="prawdopodobienstwo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

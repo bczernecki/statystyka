@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Metody statystyczne w hydrologii i klimatologii</title>
+  <meta name="description" content="Metody statystyczne w hydrologii i klimatologii">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Metody statystyczne w hydrologii i klimatologii" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Metody statystyczne w hydrologii i klimatologii" />
+  
+  
+  
+
+<meta name="author" content="(07-MSHK-HMiK1-DU)">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="wykresy-statystyczne.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Wprowadzenie</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#kwestie-organizacyjne"><i class="fa fa-check"></i>Kwestie organizacyjne</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zalecana-literatura"><i class="fa fa-check"></i>Zalecana literatura</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ksiazki"><i class="fa fa-check"></i>Książki</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zasoby-www-i-pozostae-zroda"><i class="fa fa-check"></i>Zasoby WWW i pozostałe źródła:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#program-zajec"><i class="fa fa-check"></i>Program zajęć:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html"><i class="fa fa-check"></i><b>1</b> Statystyki opisowe</a><ul>
+<li class="chapter" data-level="1.1" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#skale-pomiarowe-dane-ilosciowe"><i class="fa fa-check"></i><b>1.1</b> Skale pomiarowe (dane ilościowe)</a></li>
+<li class="chapter" data-level="1.2" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#miary-poozenia-tendencji-centralnej"><i class="fa fa-check"></i><b>1.2</b> <strong>Miary położenia (tendencji centralnej)</strong></a></li>
+<li class="chapter" data-level="1.3" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#miary-dyspersji"><i class="fa fa-check"></i><b>1.3</b> <strong>Miary dyspersji </strong></a></li>
+<li class="chapter" data-level="1.4" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#pozostae-uzyteczne-funkcje-statystyczne"><i class="fa fa-check"></i><b>1.4</b> <strong>Pozostałe użyteczne funkcje statystyczne</strong></a><ul>
+<li class="chapter" data-level="" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#wybrane-wzory"><i class="fa fa-check"></i>Wybrane wzory</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html"><i class="fa fa-check"></i><b>2</b> Wykresy statystyczne</a><ul>
+<li class="chapter" data-level="2.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-eksploracyjne"><i class="fa fa-check"></i><b>2.1</b> Wykresy eksploracyjne</a></li>
+<li class="chapter" data-level="2.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-komunikacyjne"><i class="fa fa-check"></i><b>2.2</b> Wykresy komunikacyjne</a></li>
+<li class="chapter" data-level="2.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-w-r"><i class="fa fa-check"></i><b>2.3</b> Wykresy w R</a></li>
+<li class="chapter" data-level="2.4" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2"><i class="fa fa-check"></i><b>2.4</b> ggplot2</a></li>
+<li class="chapter" data-level="2.5" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---pierwszy-wykres"><i class="fa fa-check"></i><b>2.5</b> ggplot2 - pierwszy wykres</a></li>
+<li class="chapter" data-level="2.6" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---podstawowe-informacje"><i class="fa fa-check"></i><b>2.6</b> ggplot2 - podstawowe informacje</a></li>
+<li class="chapter" data-level="2.7" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---podstawowe-sownictwo-skadnia"><i class="fa fa-check"></i><b>2.7</b> ggplot2 - podstawowe słownictwo / składnia</a></li>
+<li class="chapter" data-level="2.8" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zbior-danych"><i class="fa fa-check"></i><b>2.8</b> Zbiór danych</a></li>
+<li class="chapter" data-level="2.9" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram"><i class="fa fa-check"></i><b>2.9</b> Histogram</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#domyslny-silnik-graficzny-r"><i class="fa fa-check"></i><b>2.9.1</b> Domyślny silnik graficzny R</a></li>
+<li class="chapter" data-level="2.9.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram-w-ggplot2"><i class="fa fa-check"></i><b>2.9.2</b> Histogram w ggplot2</a></li>
+<li class="chapter" data-level="2.9.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#gestosc-prawdopodobienstwa-ggplot2"><i class="fa fa-check"></i><b>2.9.3</b> Gęstość prawdopodobieństwa ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#przyspieszamy---facet_-i-wykresy-miesieczne"><i class="fa fa-check"></i><b>2.10</b> Przyspieszamy - <code>facet_</code> i wykresy miesięczne</a></li>
+<li class="chapter" data-level="2.11" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-liniowy"><i class="fa fa-check"></i><b>2.11</b> Wykres liniowy</a></li>
+<li class="chapter" data-level="2.12" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-rozrzutu"><i class="fa fa-check"></i><b>2.12</b> Wykres rozrzutu</a></li>
+<li class="chapter" data-level="2.13" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-pudekowy"><i class="fa fa-check"></i><b>2.13</b> Wykres pudełkowy</a></li>
+<li class="chapter" data-level="2.14" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-a-dane-ilosciowe-i-jakosciowe"><i class="fa fa-check"></i><b>2.14</b> Wykresy, a dane ilościowe i jakościowe</a></li>
+<li class="chapter" data-level="2.15" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-a-dane-ilosciowe-1"><i class="fa fa-check"></i><b>2.15</b> Wykresy, a dane ilościowe (1)</a></li>
+<li class="chapter" data-level="2.16" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-a-dane-ilosciowe-2"><i class="fa fa-check"></i><b>2.16</b> Wykresy, a dane ilościowe (2)</a></li>
+<li class="chapter" data-level="2.17" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-a-dane-jakosciowe-1"><i class="fa fa-check"></i><b>2.17</b> Wykresy, a dane jakościowe (1)</a></li>
+<li class="chapter" data-level="2.18" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-a-dane-jakosciowe-2"><i class="fa fa-check"></i><b>2.18</b> Wykresy, a dane jakościowe (2)</a></li>
+<li class="chapter" data-level="2.19" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#modyfikacja-wykresow"><i class="fa fa-check"></i><b>2.19</b> Modyfikacja wykresów</a></li>
+<li class="chapter" data-level="2.20" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zapisywanie-wykresow"><i class="fa fa-check"></i><b>2.20</b> Zapisywanie wykresów</a></li>
+<li class="chapter" data-level="2.21" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#inne"><i class="fa fa-check"></i><b>2.21</b> Inne</a></li>
+<li class="chapter" data-level="2.22" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#kilka-porad"><i class="fa fa-check"></i><b>2.22</b> Kilka porad</a></li>
+<li class="chapter" data-level="2.23" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#dodatkowe-zroda-informacji"><i class="fa fa-check"></i><b>2.23</b> Dodatkowe źródła informacji</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="zadania.html"><a href="zadania.html"><i class="fa fa-check"></i><b>3</b> Zadania</a><ul>
+<li class="chapter" data-level="3.1" data-path="zadania.html"><a href="zadania.html#zadania-1"><i class="fa fa-check"></i><b>3.1</b> Zadania</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Metody statystyczne w hydrologii i klimatologii</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="zadania" class="section level1">
+<h1><span class="header-section-number">3</span> Zadania</h1>
+<div id="zadania-1" class="section level2">
+<h2><span class="header-section-number">3.1</span> Zadania</h2>
+<ol style="list-style-type: decimal">
+<li>Zainstaluj pakiet <strong>datasauRus</strong>, zawierający zbiór danych <code>datasaurus_dozen</code>. Stwórz trzy obiekty - <code>away</code>, <code>star</code> i <code>dino</code> poprzez wybranie tylko wartości, gdzie zmienna <code>dataset</code> ma wartość <code>away</code>, <code>star</code> i <code>dino</code>. Wylicz podstawowe statystyki (średnia wartość <code>x</code>, średnia wartość <code>y</code>, odchylenie standardowe <code>x</code>, odchylenie standardowe <code>y</code>) dla tych trzech obiektów. Czy się one czymś różnią? Następnie zwizualizuj te trzy obiekty.</li>
+<li>Wczytaj dane <code>data/pomiary_pol.csv</code>. Stwórz histogram pokazujący rozkład średniej temperatury rocznej (<code>annual_tavg</code>) w tym zbiorze.</li>
+<li>Stwórz wykres pokazujący relację pomiędzy temperaturą minimalną a maksymalną w kwietniu. W jaki sposób można go zinterpretować?</li>
+<li>Zbuduj wykres pudełkowy pokazujący rozkład wartości średniej temperatury rocznej (<code>annual_tavg</code>) dla kolejnych prowincji fizjograficznych. Zinterpretuj go.</li>
+<li>Zbuduj wykres pudełkowy pokazujący rozkład wartości średniej średniej rocznej sumy opadów (<code>annual_precip</code>) dla kolejnych prowincji fizjograficznych. Zinterpretuj go.</li>
+<li>Postaraj się ulepszyć stworzone wykresy poprzez dodanie tytułu, zmianę podpisu osi, edycję kolorów, itd.</li>
+<li>Zapisz stworzone wykresy do plików w formacie .png. Jak nazwiesz te pliki?</li>
+</ol>
+<!-- # Wykresy statystyczne -->
+<!-- Poniżej zamieszczono najcześciej spotykane w badaniach statystycznych wykresy. -->
+<!-- ```{r include=FALSE} -->
+<!-- library(ggplot2) -->
+<!-- library(dplyr) -->
+<!-- library(lubridate) -->
+<!-- library(tidyr) -->
+<!-- library(ggpubr) -->
+<!-- load("data/am8d.rda") -->
+<!-- ``` -->
+<!-- ## Histogram -->
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = PM10d)) + -->
+<!--          geom_histogram(col = 1) + -->
+<!--   labs( -->
+<!--     title = "Rozkład empiryczny stężeń PM10 na stacji AM8", -->
+<!--     subtitle = "", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Stężenie PM10", -->
+<!--     y = "Liczba przypadków" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+<!-- Lub w wersji z gęstością prawdopodbieństwa na osi y. Jest to podejście bardziej wszechstronne, ponieważ umożliwia porównywanie rozkładów zmiennych między sobą a dodatkowo umożliwia umieszczanie dodatkowych "warstw" (np. wynikających z zastosowania jądrowych estymatorów gęstości prawdopodobieństwa). -->
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = PM10d)) + -->
+<!--          geom_histogram(col = 1, aes(y = ..density..)) + -->
+<!--   geom_density(fill = "orange", alpha  = 0.3) + -->
+<!--   labs( -->
+<!--     title = "Rozkład empiryczny stężeń PM10 na stacji AM8", -->
+<!--     subtitle = "", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Stężenie PM10", -->
+<!--     y = "PDF" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+<!-- Porównanie rozkładów PM10 w miesiącach -->
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = PM10d)) + -->
+<!--         # geom_histogram(col = 1, aes(y = ..density..)) + -->
+<!--   geom_density(fill = "orange", alpha  = 0.3) + -->
+<!--   facet_wrap(~MONTH) + -->
+<!--   labs( -->
+<!--     title = "Stężenia PM10 na stacji AM8", -->
+<!--     subtitle = "", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Stężenie PM10", -->
+<!--     y = "PDF" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+<!-- ## Pudełko z wąsami (Box-and-whisker plot) -->
+<!-- Jest to wyjątkowo przydatny wykres obrazujący "za jednym zamachem" kilka cech analizowanej zmiennej np.: kwantyl 10%, kwantyle 25%, 50%, 75% oraz 90% (oczywiście tutaj można wykorzystać własne upodobania i np zamiast kwantyli 10%/90% zastosować wartość minimalną i maksymalną). -->
+<!-- ```{r echo=FALSE} -->
+<!--  f <- function(x) { -->
+<!--     r <- quantile(x, probs = c(0.1, 0.25, 0.5, 0.75, 0.9), na.rm = T) -->
+<!--     names(r) <- c("ymin", "lower", "middle", "upper", "ymax") -->
+<!--     r -->
+<!--     } -->
+<!-- ggplot(am8d, aes(x = as.factor(MONTH), y = TEMPd)) + -->
+<!--  stat_summary(fun.data = f, geom="errorbar", width = 0.3) + -->
+<!--     stat_summary(fun.data = f, geom="boxplot") + -->
+<!-- labs( -->
+<!--     title = "Roczny przebieg temperatury powietrza", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Miesiąc", -->
+<!--     y = "Temperatura powietrza" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = as.factor(MONTH), y = PM10d)) + -->
+<!--  stat_summary(fun.data = f, geom="errorbar", width = 0.3) + -->
+<!--     stat_summary(fun.data = f, geom="boxplot") + -->
+<!-- labs( -->
+<!--     title = "Roczny przebieg stężeń PM10", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Miesiąc", -->
+<!--     y = "Stężenie PM10" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+<!-- ## Wykres liniowy -->
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = DATE, y = PM10d)) + -->
+<!--   geom_line()+ -->
+<!--   geom_hline(yintercept = 50, col = 2, size = 0.5, lty = 3) + -->
+<!--   labs( -->
+<!--     title = "Przebieg dobowych stężeń PM10 (2010-2015)", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Data", -->
+<!--     y = "Stężenie PM10" -->
+<!--     ) + -->
+<!--   scale_x_date(date_breaks = "2 month") + -->
+<!--   theme_bw() + -->
+<!--   theme(axis.text.x = element_text(angle = 90, hjust = 0.5)) -->
+<!-- ``` -->
+<!-- ## Wykresy strukturalne -->
+<!-- ```{r echo=FALSE } -->
+<!-- am8d %>% -->
+<!--   mutate(PM10hi = ifelse(PM10d>50, 1, 0)) -> am8d -->
+<!-- ggplot(am8d, aes(x = as.factor(MONTH))) + -->
+<!--   geom_bar(position = "fill", aes(fill = as.factor(PM10hi)))+ -->
+<!--   labs( -->
+<!--     title = "Przekroczenia normy dobowego stężenia PM10 - struktura miesięczna", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Miesiąc", -->
+<!--     y = "%", -->
+<!--     fill = "Przekroczenie" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+<!-- ```{r echo=FALSE } -->
+<!-- am8d %>% -->
+<!--   mutate(PM10hi = ifelse(PM10d>50, 1, 0)) -> am8d -->
+<!-- ggplot(am8d, aes(x = as.factor(MONTH))) + -->
+<!--   geom_bar(position = "fill", aes(fill = as.factor(PM10hi)))+ -->
+<!--   labs( -->
+<!--     title = "Przekroczenia normy dobowego stężenia PM10 - struktura miesięczna", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Miesiąc", -->
+<!--     y = "%", -->
+<!--     fill = "Przekroczenie" -->
+<!--     ) + -->
+<!--   theme_bw() + -->
+<!--   facet_wrap(~YEAR) -->
+<!-- ``` -->
+<!-- ## Wykresy rozrzutu (XY) -->
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = TEMPd, y = PM10d)) + -->
+<!--   geom_point(alpha = 0.3)+ -->
+<!--   geom_smooth(method = "lm")+ -->
+<!--   facet_wrap(~MONTH, scale = "free") + -->
+<!-- labs( -->
+<!--     title = "Dobowe stężenia PM10 vs średnia dobowa temperatura powietrza", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Temperatura", -->
+<!--     y = "Stężenie PM10" -->
+<!--     ) + -->
+<!--   stat_cor(method = "spearman", -->
+<!--                label.x.npc = 0.5, -->
+<!--                label.y.npc = 1) -->
+<!-- ``` -->
+<!-- ## Zadania -->
+<!-- Wykorzystując tabele z Zadania 3 narysuj nastepujące wykresy: -->
+<!-- 1. Wykres liniowy maksymalnej, średniej oraz minimalnej dobowej temperatury powietrza -->
+<!-- 2. Wykres strukturalny w podziale na dekady odnoszący się do udziału dni ze średnią temperaturą powietrza poniżej 0 &deg; C -->
+<!-- 3. Box-and-whisker plot dla nastepujących charakterystyk: minimum, Q1, Q2(Me), Q3, maksimum. -->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="wykresy-statystyczne.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

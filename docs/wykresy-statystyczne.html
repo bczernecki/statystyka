@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Wykresy statystyczne | Metody statystyczne w hydrologii i klimatologii</title>
+  <meta name="description" content="2 Wykresy statystyczne | Metody statystyczne w hydrologii i klimatologii" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Wykresy statystyczne | Metody statystyczne w hydrologii i klimatologii" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Wykresy statystyczne | Metody statystyczne w hydrologii i klimatologii" />
+  
+  
+  
+
+<meta name="author" content="(07-MSHK-HMiK1-DU)" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="statystyki-opisowe.html"/>
+<link rel="next" href="korelacja-i-asocjacja.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Wprowadzenie</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#kwestie-organizacyjne"><i class="fa fa-check"></i>Kwestie organizacyjne</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zalecana-literatura"><i class="fa fa-check"></i>Zalecana literatura</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ksiazki"><i class="fa fa-check"></i>Książki</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zasoby-www-i-pozostae-zroda"><i class="fa fa-check"></i>Zasoby WWW i pozostałe źródła:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#program-zajec"><i class="fa fa-check"></i>Program zajęć:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html"><i class="fa fa-check"></i><b>1</b> Statystyki opisowe</a><ul>
+<li class="chapter" data-level="1.1" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#skale-pomiarowe-dane-ilosciowe"><i class="fa fa-check"></i><b>1.1</b> Skale pomiarowe (dane ilościowe)</a></li>
+<li class="chapter" data-level="1.2" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#miary-poozenia-tendencji-centralnej"><i class="fa fa-check"></i><b>1.2</b> <strong>Miary położenia (tendencji centralnej)</strong></a></li>
+<li class="chapter" data-level="1.3" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#miary-dyspersji"><i class="fa fa-check"></i><b>1.3</b> <strong>Miary dyspersji </strong></a></li>
+<li class="chapter" data-level="1.4" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#pozostae-uzyteczne-funkcje-statystyczne"><i class="fa fa-check"></i><b>1.4</b> <strong>Pozostałe użyteczne funkcje statystyczne</strong></a><ul>
+<li class="chapter" data-level="" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#wybrane-wzory"><i class="fa fa-check"></i>Wybrane wzory</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html"><i class="fa fa-check"></i><b>2</b> Wykresy statystyczne</a><ul>
+<li class="chapter" data-level="2.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-eksploracyjne"><i class="fa fa-check"></i><b>2.1</b> Wykresy eksploracyjne</a></li>
+<li class="chapter" data-level="2.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-komunikacyjne"><i class="fa fa-check"></i><b>2.2</b> Wykresy komunikacyjne</a></li>
+<li class="chapter" data-level="2.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-w-r"><i class="fa fa-check"></i><b>2.3</b> Wykresy w R</a></li>
+<li class="chapter" data-level="2.4" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2"><i class="fa fa-check"></i><b>2.4</b> ggplot2</a></li>
+<li class="chapter" data-level="2.5" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---pierwszy-wykres"><i class="fa fa-check"></i><b>2.5</b> ggplot2 - pierwszy wykres</a></li>
+<li class="chapter" data-level="2.6" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---podstawowe-informacje"><i class="fa fa-check"></i><b>2.6</b> ggplot2 - podstawowe informacje</a></li>
+<li class="chapter" data-level="2.7" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---podstawowe-sownictwo-skadnia"><i class="fa fa-check"></i><b>2.7</b> ggplot2 - podstawowe słownictwo / składnia</a></li>
+<li class="chapter" data-level="2.8" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zbior-danych"><i class="fa fa-check"></i><b>2.8</b> Zbiór danych</a></li>
+<li class="chapter" data-level="2.9" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram"><i class="fa fa-check"></i><b>2.9</b> Histogram</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#domyslny-silnik-graficzny-r"><i class="fa fa-check"></i><b>2.9.1</b> Domyślny silnik graficzny R</a></li>
+<li class="chapter" data-level="2.9.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram-w-ggplot2"><i class="fa fa-check"></i><b>2.9.2</b> Histogram w ggplot2</a></li>
+<li class="chapter" data-level="2.9.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#gestosc-prawdopodobienstwa-ggplot2"><i class="fa fa-check"></i><b>2.9.3</b> Gęstość prawdopodobieństwa ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#przyspieszamy---facet_-i-wykresy-miesieczne"><i class="fa fa-check"></i><b>2.10</b> Przyspieszamy - <code>facet_</code> i wykresy miesięczne</a></li>
+<li class="chapter" data-level="2.11" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-liniowy"><i class="fa fa-check"></i><b>2.11</b> Wykres liniowy</a></li>
+<li class="chapter" data-level="2.12" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-rozrzutu"><i class="fa fa-check"></i><b>2.12</b> Wykres rozrzutu</a><ul>
+<li class="chapter" data-level="2.12.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#dane-ilosciowe-i-jakosciowe-na-wykresach-rozrzutu"><i class="fa fa-check"></i><b>2.12.1</b> Dane ilościowe i jakościowe na wykresach rozrzutu</a></li>
+</ul></li>
+<li class="chapter" data-level="2.13" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-pudekowy-box-and-whisker-plots"><i class="fa fa-check"></i><b>2.13</b> Wykres pudełkowy (<em>box and whisker plots</em>)</a></li>
+<li class="chapter" data-level="2.14" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-supkowe"><i class="fa fa-check"></i><b>2.14</b> Wykresy słupkowe</a></li>
+<li class="chapter" data-level="2.15" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-strukturalne"><i class="fa fa-check"></i><b>2.15</b> Wykresy strukturalne</a></li>
+<li class="chapter" data-level="2.16" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wskazowki"><i class="fa fa-check"></i><b>2.16</b> Wskazówki</a><ul>
+<li class="chapter" data-level="2.16.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#modyfikacja-wykresow"><i class="fa fa-check"></i><b>2.16.1</b> Modyfikacja wykresów</a></li>
+</ul></li>
+<li class="chapter" data-level="2.17" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zapisywanie-wykresow"><i class="fa fa-check"></i><b>2.17</b> Zapisywanie wykresów</a></li>
+<li class="chapter" data-level="2.18" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zadania"><i class="fa fa-check"></i><b>2.18</b> Zadania</a></li>
+<li class="chapter" data-level="2.19" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#inne"><i class="fa fa-check"></i><b>2.19</b> Inne</a><ul>
+<li class="chapter" data-level="2.19.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#kilka-porad"><i class="fa fa-check"></i><b>2.19.1</b> Kilka porad</a></li>
+<li class="chapter" data-level="2.19.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#dodatkowe-zroda-informacji"><i class="fa fa-check"></i><b>2.19.2</b> Dodatkowe źródła informacji</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html"><i class="fa fa-check"></i><b>3</b> Korelacja i asocjacja</a><ul>
+<li class="chapter" data-level="3.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-korelacji-liniowej-pearsona-r_xy"><i class="fa fa-check"></i><b>3.1</b> Współczynnik korelacji liniowej Pearsona (<span class="math inline">\(r_{xy}\)</span>)</a></li>
+<li class="chapter" data-level="3.2" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#trening---zgadnij-wartosc-korelacji"><i class="fa fa-check"></i><b>3.2</b> Trening - zgadnij wartość korelacji</a></li>
+<li class="chapter" data-level="3.3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-determinacji-r2"><i class="fa fa-check"></i><b>3.3</b> Współczynnik determinacji <span class="math inline">\(r^2\)</span></a></li>
+<li class="chapter" data-level="3.4" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-korelacji-rang-spearmana-r_s"><i class="fa fa-check"></i><b>3.4</b> Współczynnik korelacji rang Spearman’a <span class="math inline">\(r_s\)</span></a></li>
+<li class="chapter" data-level="3.5" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#obliczenia-wspoczynnika-korelacji-w-r"><i class="fa fa-check"></i><b>3.5</b> Obliczenia współczynnika korelacji w R</a></li>
+<li class="chapter" data-level="3.6" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#nao-a-temperatura-powietrza-i-opady-atmosferyczne-w-polsce"><i class="fa fa-check"></i><b>3.6</b> NAO a temperatura powietrza i opady atmosferyczne w Polsce</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#dane"><i class="fa fa-check"></i><b>3.6.1</b> Dane</a></li>
+<li class="chapter" data-level="3.6.2" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zadanie-1"><i class="fa fa-check"></i><b>3.6.2</b> Zadanie 1</a></li>
+<li class="chapter" data-level="3.6.3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zadanie-2"><i class="fa fa-check"></i><b>3.6.3</b> Zadanie 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#warto-pamietac---zaozenia-analizy-korelacji"><i class="fa fa-check"></i><b>3.7</b> Warto pamiętać - Założenia analizy korelacji</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zalecane-materiay-uzupeniajace"><i class="fa fa-check"></i><b>3.7.1</b> zalecane materiały uzupełniające:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Metody statystyczne w hydrologii i klimatologii</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="wykresy-statystyczne" class="section level1">
+<h1><span class="header-section-number">2</span> Wykresy statystyczne</h1>
+<div id="wykresy-eksploracyjne" class="section level2">
+<h2><span class="header-section-number">2.1</span> Wykresy eksploracyjne</h2>
+<ul>
+<li>służą głównie dla ich twórcy</li>
+<li>kluczową ich cechą jest możliwość iteracji</li>
+</ul>
+</div>
+<div id="wykresy-komunikacyjne" class="section level2">
+<h2><span class="header-section-number">2.2</span> Wykresy komunikacyjne</h2>
+<ul>
+<li>służą głównie przekazaniu wiedzy</li>
+<li>ich stworzenie wymaga czasu</li>
+<li>ważny jest dobór podpisów, kolorów, etc.</li>
+</ul>
+</div>
+<div id="wykresy-w-r" class="section level2">
+<h2><span class="header-section-number">2.3</span> Wykresy w R</h2>
+<ul>
+<li>istnieje wiele różnych możliwości tworzenia wykresów w R</li>
+<li>najczęściej używane to <strong>podstawowe silnik graficznych</strong> oraz pakiet <strong>ggplot2</strong></li>
+</ul>
+</div>
+<div id="ggplot2" class="section level2">
+<h2><span class="header-section-number">2.4</span> ggplot2</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a></code></pre></div>
+</div>
+<div id="ggplot2---pierwszy-wykres" class="section level2">
+<h2><span class="header-section-number">2.5</span> ggplot2 - pierwszy wykres</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">df =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">A =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>), <span class="dt">B =</span> <span class="kw">seq</span>(<span class="dv">22</span>, <span class="dv">4</span>, <span class="dt">by =</span> <span class="dv">-2</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> df, <span class="kw">aes</span>(<span class="dt">x =</span> A, <span class="dt">y =</span> B)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="ggplot2---podstawowe-informacje" class="section level2">
+<h2><span class="header-section-number">2.6</span> ggplot2 - podstawowe informacje</h2>
+<ul>
+<li>pakiet jest implementacją założeń zawartych w książce “Grammar of Graphics” Lelanda Wilkinsona</li>
+<li>ramka danych (<code>data.frame</code>) jest zazwyczaj wymaganą klasą obiektu danych wejściowych (w tzw. postaci wąskiej)</li>
+<li>istnieją dwie komendy pozwalające na tworzenie wykresów - <em>qplot</em> oraz <em>ggplot</em></li>
+<li>pełna dokumentacja znajduje się na stronie - <a href="http://docs.ggplot2.org" class="uri">http://docs.ggplot2.org</a> oraz <a href="https://ggplot2-book.org/" class="uri">https://ggplot2-book.org/</a></li>
+<li>przydatny, zwłaszcza na początku pracy może okazać się <em>cheat sheet</em> <a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" class="uri">https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf</a></li>
+</ul>
+</div>
+<div id="ggplot2---podstawowe-sownictwo-skadnia" class="section level2">
+<h2><span class="header-section-number">2.7</span> ggplot2 - podstawowe słownictwo / składnia</h2>
+<ul>
+<li><strong>geom</strong> - oznacza typ wykresu (np. “histogram”, “boxplot”, “point”, etc.)</li>
+<li>aesthetics (<strong>aes</strong>) - oznacza kształt, kolor, wielkość, etc.</li>
+<li>facets (<strong>facet</strong>) - oznacza wykresy dla podzbiorów</li>
+<li>kolejne elementy składni dodawane za pomocą <code>+</code></li>
+</ul>
+</div>
+<div id="zbior-danych" class="section level2">
+<h2><span class="header-section-number">2.8</span> Zbiór danych</h2>
+<ul>
+<li>Dane godzinowe i dobowe koncentracji zanieczyszczeń atmosferycznej na jednej ze stacji monitoringu jakości powietrza + podstawowe dane meteorologiczne</li>
+<li>Dane obserwacyjne (w minimalnym stopniu zaszumione)</li>
+<li>Pobierz pliki (“am8d.rda” i “am8_final.rda”) lub wczytaj dane bezpośrednio ze strony: www.enwo.pl/student</li>
+<li>Zapoznaj się ze strukturą tych plików</li>
+</ul>
+<hr />
+</div>
+<div id="histogram" class="section level2">
+<h2><span class="header-section-number">2.9</span> Histogram</h2>
+<ul>
+<li>stworzony przez Karla Pearsona</li>
+<li>jest graficzną reprezentacją rozkładu <br> danych</li>
+<li>wartości danych są łączone w przedziały (na osi poziomej) a na osi pionowej jest ukazana liczba punktów (obserwacji) w każdym przedziale</li>
+<li>różny dobór przedziałów może dawać inną informację</li>
+<li>w pakiecie ggplot2, przedział to domyślnie zakres/30</li>
+</ul>
+<div id="domyslny-silnik-graficzny-r" class="section level3">
+<h3><span class="header-section-number">2.9.1</span> Domyślny silnik graficzny R</h3>
+<ul>
+<li>funkcja <code>hist</code> (np. na danych dobowych dla koncentracji PM10)</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">hist</span>(am8d<span class="op">$</span>PM10d)</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Możliwość dalszego ulepszania wyglądu histogramu za pomocą standardowych opcji graficznych. Szczegółowe informacje: <code>?plot</code>, <code>?hist</code>.</p>
+<p>Najważniejsze argumenty:</p>
+<ul>
+<li><code>main</code> - zmiana tytułu wykresu</li>
+<li><code>xlab</code>, <code>ylab</code> - zmiana podpisów osi X i Y</li>
+<li><code>col</code> - zmiana koloru wykresu</li>
+<li><code>grid</code> - dodanie siatki dla dowolnie zdefiniowanych argumentów graficznych (<code>lty =</code> - typ linii, <code>col</code> - kolor, <code>lwd</code> - grubość linii, itd…)</li>
+<li><code>abline</code> (wraz z argumentami) - dodanie linii (najczęściej z argumentami <code>h=</code> i <code>v=</code>)</li>
+<li><code>text</code> - dodanie dowolnego tekstu w określonych współrzędnych histogramu</li>
+</ul>
+</div>
+<div id="histogram-w-ggplot2" class="section level3">
+<h3><span class="header-section-number">2.9.2</span> Histogram w ggplot2</h3>
+<ul>
+<li>geom - <code>geom_histogram()</code></li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> am8d, <span class="kw">aes</span>(<span class="dt">x =</span> PM10d)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_histogram</span>()</a></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Argumenty pozwalające na ulepszenie wykresu:</p>
+<ul>
+<li><code>binwidth</code> - zmiana szerokości przedziałów histogramu (wewnątrz <code>geom_histogram</code>)</li>
+<li><code>col</code> - zmiana koloru linii histogramu (wewnątrz <code>geom_histogram</code>)</li>
+<li><code>fill</code> - zmiana koloru wypełnienia histogramu (wewnątrz <code>geom_histogram</code>)</li>
+<li><code>labs</code> - dostosowanie podpisów wykresu. Argumenty: <code>title</code>, <code>subtitle</code>, <code>caption</code>, <code>x</code>, <code>y</code></li>
+<li>themes - zmiana szaty graficznej wykresu na podstawie jednego ze zdefiniowanych szablonów</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">ggplot</span>(am8d, <span class="kw">aes</span>(<span class="dt">x =</span> PM10d)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="st">         </span><span class="kw">geom_histogram</span>(<span class="dt">col =</span> <span class="dv">1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="st">  </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb10-4" data-line-number="4">    <span class="dt">title =</span> <span class="st">&quot;Rozkład empiryczny stężeń PM10 na stacji AM8&quot;</span>,</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5">    <span class="dt">subtitle =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb10-6" data-line-number="6">    <span class="dt">caption =</span> <span class="st">&quot;źródło: ARMAAG ()&quot;</span>,</a>
+<a class="sourceLine" id="cb10-7" data-line-number="7">    <span class="dt">x =</span> <span class="st">&quot;Stężenie PM10&quot;</span>,</a>
+<a class="sourceLine" id="cb10-8" data-line-number="8">    <span class="dt">y =</span> <span class="st">&quot;Liczba przypadków&quot;</span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="st">    ) +</span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="st">  theme_bw()</span></a></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="gestosc-prawdopodobienstwa-ggplot2" class="section level3">
+<h3><span class="header-section-number">2.9.3</span> Gęstość prawdopodobieństwa ggplot2</h3>
+<p>Rozkład danych można także przedstawić za pomocą gęstością prawdopodbieństwa na osi y. Jest to podejście bardziej wszechstronne, ponieważ umożliwia porównywanie rozkładów zmiennych między sobą a dodatkowo umożliwia umieszczanie dodatkowych “warstw” (np. wynikających z zastosowania jądrowych estymatorów gęstości prawdopodobieństwa)</p>
+<ul>
+<li>geom - <code>geom_density()</code></li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">ggplot</span>(am8d, <span class="kw">aes</span>(<span class="dt">x =</span> PM10d)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">col =</span> <span class="dv">1</span>, <span class="kw">aes</span>(<span class="dt">y =</span> ..density..)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">fill =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">alpha  =</span> <span class="fl">0.3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="st">  </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">    <span class="dt">title =</span> <span class="st">&quot;Rozkład empiryczny stężeń PM10 na stacji AM8&quot;</span>,</a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">    <span class="dt">subtitle =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb12-7" data-line-number="7">    <span class="dt">caption =</span> <span class="st">&quot;źródło: ARMAAG (jittered)&quot;</span>,</a>
+<a class="sourceLine" id="cb12-8" data-line-number="8">    <span class="dt">x =</span> <span class="st">&quot;Stężenie PM10&quot;</span>,</a>
+<a class="sourceLine" id="cb12-9" data-line-number="9">    <span class="dt">y =</span> <span class="st">&quot;PDF&quot;</span></a>
+<a class="sourceLine" id="cb12-10" data-line-number="10">    ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-11" data-line-number="11"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+</div>
+<div id="przyspieszamy---facet_-i-wykresy-miesieczne" class="section level2">
+<h2><span class="header-section-number">2.10</span> Przyspieszamy - <code>facet_</code> i wykresy miesięczne</h2>
+<ul>
+<li>Mając stworzony szablon wykresu można w łatwy sposób zautomatyzować proces naszych analiz po tzw. zmiennej grupującej</li>
+<li>Przykładowo, jeśli chcemy stworzyć 12 wykresów dla miesięcy możemy dodać kolejny fragment kodu <code>ggplota</code> którym jest <code>facet_wrap</code> bądź <code>facet_grid</code> a następnie podać po znaku tyldy (<code>~</code>) kolumne z unikalnymi wartościami:</li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="wykres-liniowy" class="section level2">
+<h2><span class="header-section-number">2.11</span> Wykres liniowy</h2>
+<ul>
+<li><p>Jeden z najbardziej podstawowych typów wykresu, najczęściej stosowany w naukach atmosferycznych do zaprezentowania dynamiki zmiennych typu ciągłego</p></li>
+<li><p>geom - <code>geom_line</code></p></li>
+<li><p>Spróbujmy na początek “przyciąć” nasz zbiór danych dobowych tylko do roku 2010 i zapiszmy go jako <strong>am2010</strong></p></li>
+<li><p>Następnie stwórzmy wykres liniowy dla temperatury powietrza (kolumna <code>TEMPd</code>)</p></li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">am2010 =<span class="st"> </span>am8d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(YEAR <span class="op">==</span><span class="st"> </span><span class="dv">2010</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> am2010, <span class="kw">aes</span>(<span class="dt">x =</span> DATE, <span class="dt">y =</span> TEMPd)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_line</span>()</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Jeśli chcemy dodać kolejną linię do naszego wykresu bez próby konwersji ramki danych do postaci wąskiej konieczne jest dodanie kolejnego <code>geom_line</code></li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> am2010, <span class="kw">aes</span>(<span class="dt">x =</span> DATE, <span class="dt">y =</span> TEMPd)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_line</span>()<span class="op">+</span></a>
+<a class="sourceLine" id="cb16-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">y =</span> PM10d, <span class="dt">colour =</span> <span class="st">&quot;blue&quot;</span>))</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="wykres-rozrzutu" class="section level2">
+<h2><span class="header-section-number">2.12</span> Wykres rozrzutu</h2>
+<p>Najbardziej podstawowym (wizualnym) sposobem przedstawienia relacji pomiędzy dwoma zmiennymi jest wykres rozrzutu.</p>
+<p>W podstawowym silniku graficznym <strong>R</strong> można do tego celu wykorzystać funkcję <code>plot</code> definiując zakresy dla osi X i Y. Spróbujmy wykreślić zależność pomiędzy koncentracją PM10 i temperaturą powietrza w miesiącach sezonu zimowego:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">zima =<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">filter</span>(am8d, MONTH <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">12</span>,<span class="dv">1</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw">plot</span>(zima<span class="op">$</span>TEMPd, zima<span class="op">$</span>PM10d)</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Dla pakietu <code>ggplot2</code> ten sam efekt można osiągnać</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> zima, <span class="kw">aes</span>(<span class="dt">x =</span> TEMPd, <span class="dt">y =</span> PM10d)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="dane-ilosciowe-i-jakosciowe-na-wykresach-rozrzutu" class="section level3">
+<h3><span class="header-section-number">2.12.1</span> Dane ilościowe i jakościowe na wykresach rozrzutu</h3>
+<p>Zaprezentowanie dodatkowej zmiennej/zmiennych na wykresach rozrzutu jest możliwe poprzez uwzględnienie danej cechy jako koloru, rozmiaru lub kształtu.</p>
+<p>Dla standardowego silnik graficznego <strong>R</strong> ww. argumenty graficzne to <code>col</code>, <code>cex</code> i <code>pch</code>:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">zima<span class="op">$</span>kolor =<span class="st"> </span><span class="kw">ifelse</span>(zima<span class="op">$</span>MONTH<span class="op">&gt;</span><span class="dv">2</span>, <span class="dv">3</span>, zima<span class="op">$</span>MONTH)</a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="kw">plot</span>(zima<span class="op">$</span>TEMPd, zima<span class="op">$</span>PM10d, <span class="dt">col=</span> zima<span class="op">$</span>kolor)</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">plot</span>(zima<span class="op">$</span>TEMPd, zima<span class="op">$</span>PM10d, <span class="dt">cex =</span> zima<span class="op">$</span>kolor)</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="kw">plot</span>(zima<span class="op">$</span>TEMPd, zima<span class="op">$</span>PM10d, <span class="dt">pch=</span> zima<span class="op">$</span>kolor)</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Dla pakietu <code>ggplot</code> będą to argumenty: <code>color</code>, <code>size</code> i <code>shape</code>:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> zima, <span class="kw">aes</span>(<span class="dt">x =</span> TEMPd, <span class="dt">y =</span> PM10d, <span class="dt">color =</span> MONTH)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" style="display: block; margin: auto;" />
+Powstała paleta barwna ma charakter “ciągły”, co wynika z liczbowego charakteru zmiennej <code>MONTH</code>. Możemy ją także przekazać w sposób kategoryczny:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> zima, <span class="kw">aes</span>(<span class="dt">x =</span> TEMPd, <span class="dt">y =</span> PM10d, <span class="dt">color =</span> <span class="kw">as.factor</span>(MONTH))) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Następnie możemy modyfikować wielkość punktów, np. w zależności od np. (odwrotności) prędkości wiatru. Jak zinterpretujesz poniższy wykres?</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> zima, <span class="kw">aes</span>(<span class="dt">x =</span> TEMPd, <span class="dt">y =</span> PM10d, <span class="dt">color =</span> <span class="kw">as.factor</span>(MONTH), <span class="dt">size =</span> <span class="kw">round</span>(<span class="dv">1</span><span class="op">/</span>VELd))) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb24-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha=</span><span class="fl">0.8</span>)</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Na koniec sprawdźmy działanie argumentu <code>shape</code> np. dla miesięcy:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> zima, <span class="kw">aes</span>(<span class="dt">x =</span> TEMPd, <span class="dt">y =</span> PM10d, <span class="dt">shape =</span> <span class="kw">as.factor</span>(MONTH))) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha=</span><span class="fl">0.8</span>, <span class="dt">size=</span><span class="dv">3</span>)</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="wykres-pudekowy-box-and-whisker-plots" class="section level2">
+<h2><span class="header-section-number">2.13</span> Wykres pudełkowy (<em>box and whisker plots</em>)</h2>
+<p>Istnieje przynajmniej kilka wersji stosowanych wykresów pudełkowych, które stosuje się do przedstawienia typowych zakresów zmienności zjawiska. Jedna z implementacji wykresów pudełkowych obrazuje:</p>
+<ul>
+<li>pięć podstawowych statystyk opisowych oraz wartości odstające</li>
+<li>“pudełko”&quot; to zakres międzykwantylowy</li>
+<li>linie oznaczają najbardziej ekstremalne wartości, ale nie odstające. Górna to 1,5*IQR ponad krawędź pudełka, dolna to 1,5*IQR poniżej wartości dolnej krawędzi pudełka; możliwa jest także implementacja z zakresem np. skrajnie niskich i wysokich wartości kwantyli</li>
+<li>linia środkowa to mediana</li>
+<li>“kropki” oznaczają wartości odstające</li>
+</ul>
+<p>Poniżej zamieszczono przykładowy kod ilustrujący charakterystyczne zakresy wartości temperatur powietrza w poszczególnych miesiącach:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">ggplot</span>(am8d, <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">as.factor</span>(MONTH), <span class="dt">y =</span> TEMPd)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb26-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_boxplot</span>()<span class="op">+</span></a>
+<a class="sourceLine" id="cb26-3" data-line-number="3"><span class="st"> </span><span class="kw">labs</span>( </a>
+<a class="sourceLine" id="cb26-4" data-line-number="4">     <span class="dt">title =</span> <span class="st">&quot;Roczny przebieg temperatury powietrza&quot;</span>, </a>
+<a class="sourceLine" id="cb26-5" data-line-number="5">     <span class="dt">subtitle =</span> <span class="st">&quot;Stacja: AM8&quot;</span>, </a>
+<a class="sourceLine" id="cb26-6" data-line-number="6">     <span class="dt">caption =</span> <span class="st">&quot;źródło: ARMAAG (jittered)&quot;</span>, </a>
+<a class="sourceLine" id="cb26-7" data-line-number="7">     <span class="dt">x =</span> <span class="st">&quot;Miesiąc&quot;</span>, </a>
+<a class="sourceLine" id="cb26-8" data-line-number="8">     <span class="dt">y =</span> <span class="st">&quot;Temperatura powietrza&quot;</span> </a>
+<a class="sourceLine" id="cb26-9" data-line-number="9">     ) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb26-10" data-line-number="10"><span class="st">   </span><span class="kw">theme_bw</span>() </a></code></pre></div>
+</div>
+<div id="wykresy-supkowe" class="section level2">
+<h2><span class="header-section-number">2.14</span> Wykresy słupkowe</h2>
+<p>Dla wizualizacji elementów nieciągłych dobrym sposobem są wykresy słupkowe definiowane za pomocą geom’u: <code>geom_bar</code>. Spróbujmy przedstawić liczbę przypadków z przkeroczeniem dobowej normy PM10 w poszczególnych miesiącach:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="co"># przygotowanie dodatkowej kolumny z przekroczeniami PM10&gt;50uq/m3</span></a>
+<a class="sourceLine" id="cb27-2" data-line-number="2">am8d<span class="op">$</span>PM10hi =<span class="st"> </span><span class="kw">ifelse</span>(am8d<span class="op">$</span>PM10d<span class="op">&gt;</span><span class="dv">50</span>, <span class="dv">1</span>, <span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb27-3" data-line-number="3">tabelka =<span class="st"> </span>am8d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(MONTH) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">suma =</span> <span class="kw">sum</span>(PM10hi)) <span class="co"># zliczamy liczbe przypadkow w miesiacach</span></a>
+<a class="sourceLine" id="cb27-4" data-line-number="4"><span class="kw">str</span>(tabelka)</a></code></pre></div>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    12 obs. of  2 variables:
+##  $ MONTH: num  1 2 3 4 5 6 7 8 9 10 ...
+##  $ suma : num  19 28 19 2 1 0 0 0 1 9 ...</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw">ggplot</span>(tabelka, <span class="kw">aes</span>(<span class="kw">as.factor</span>(MONTH), suma)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>)</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="wykresy-strukturalne" class="section level2">
+<h2><span class="header-section-number">2.15</span> Wykresy strukturalne</h2>
+<p>Wykresy słupkowe mogą być rozwinięte do postaci wykresów strukturalnych.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">ggplot</span>(am8d, <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">as.factor</span>(MONTH))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb30-2" data-line-number="2"><span class="st">   </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;fill&quot;</span>, <span class="kw">aes</span>(<span class="dt">fill =</span> <span class="kw">as.factor</span>(PM10hi)))<span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb30-3" data-line-number="3"><span class="st">   </span><span class="kw">labs</span>( </a>
+<a class="sourceLine" id="cb30-4" data-line-number="4">     <span class="dt">title =</span> <span class="st">&quot;Przekroczenia normy dobowego stężenia PM10 - struktura miesięczna&quot;</span>, </a>
+<a class="sourceLine" id="cb30-5" data-line-number="5">     <span class="dt">subtitle =</span> <span class="st">&quot;Stacja: AM8&quot;</span>, </a>
+<a class="sourceLine" id="cb30-6" data-line-number="6">     <span class="dt">caption =</span> <span class="st">&quot;źródło: ARMAAG (jittered)&quot;</span>, </a>
+<a class="sourceLine" id="cb30-7" data-line-number="7">     <span class="dt">x =</span> <span class="st">&quot;Miesiąc&quot;</span>, </a>
+<a class="sourceLine" id="cb30-8" data-line-number="8">     <span class="dt">y =</span> <span class="st">&quot;%&quot;</span>, </a>
+<a class="sourceLine" id="cb30-9" data-line-number="9">     <span class="dt">fill =</span> <span class="st">&quot;Przekroczenie&quot;</span> </a>
+<a class="sourceLine" id="cb30-10" data-line-number="10">     ) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb30-11" data-line-number="11"><span class="st">   </span><span class="kw">theme_bw</span>() </a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+</div>
+<div id="wskazowki" class="section level2">
+<h2><span class="header-section-number">2.16</span> Wskazówki</h2>
+<div id="modyfikacja-wykresow" class="section level3">
+<h3><span class="header-section-number">2.16.1</span> Modyfikacja wykresów</h3>
+<p>Wykresy <code>ggplota</code> nie muszą generowane jednorazowo. Mogą być one zapisane do obiektu a następnie zmodyfikowane i wywołane poprzez nazwę stworzonego obiektu.
+Podany sposób postępowania można przedstawić na poniższym przykładzie rysowania dystrybuanty dla koncentracji średniej dobowej PM10:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1">p =<span class="st"> </span><span class="kw">ggplot</span>(am8d, <span class="kw">aes</span>(PM10d)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_ecdf</span>(<span class="dt">geom =</span> <span class="st">&quot;step&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb31-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb31-3" data-line-number="3">p =<span class="st"> </span>p <span class="op">+</span></a>
+<a class="sourceLine" id="cb31-4" data-line-number="4"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Prawdopodobieństwo [%]&quot;</span>,</a>
+<a class="sourceLine" id="cb31-5" data-line-number="5">       <span class="dt">y =</span> <span class="st">&quot;PM10 [ug/m3]&quot;</span>)</a>
+<a class="sourceLine" id="cb31-6" data-line-number="6">p</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="zapisywanie-wykresow" class="section level2">
+<h2><span class="header-section-number">2.17</span> Zapisywanie wykresów</h2>
+<p>Wykresy mogą być zapisane do postaci pliku graficznego na kilka sposobów. Najbardziej intuicyjne będzie wykorzystanie okna plot. Większą kontrolę można uzyskać z poziomu linii komend. Poniżej podano przykładowe 2 wywołania funkcji <code>ggsave</code></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">ggsave</span>(<span class="dt">filename =</span> <span class="st">&quot;Wykres.pdf&quot;</span>, <span class="dt">plot =</span> p)</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw">ggsave</span>(<span class="dt">filename =</span> <span class="st">&quot;Wykres.png&quot;</span>, <span class="dt">plot =</span> p, <span class="dt">dpi =</span> <span class="dv">300</span>)</a></code></pre></div>
+</div>
+<div id="zadania" class="section level2">
+<h2><span class="header-section-number">2.18</span> Zadania</h2>
+<p>Wykorzystując dane godzinowe narysuj nastepujące wykresy:</p>
+<ol style="list-style-type: decimal">
+<li>Wykres liniowy maksymalnej, średniej oraz minimalnej dobowej temperatury powietrza</li>
+<li>Histogram prędkości wiatru dla (a) całego roku (b) w ujęciu miesięcznym</li>
+<li>Wykres pudełkowy dla wilgotności względnej powietrza w ujęciu miesięcznym</li>
+<li>Stwórz wykres dystrybuanty temperatury powietrza dla (a) całego roku (b) w ujęciu miesięcznym. Zapisz wykres do dowolnie nazwanego obiektu</li>
+<li>Zmodyfikuj zapisany w pkt 4. obiekt dodając nowe podpisy osi. Następnie sprawdź działanie funkcji graficznej <code>coord_flip()</code></li>
+</ol>
+</div>
+<div id="inne" class="section level2">
+<h2><span class="header-section-number">2.19</span> Inne</h2>
+<ul>
+<li>Kolejne typy wykresów (inne <em>geomy</em>)</li>
+<li>Przekształanie danych na wykresach (np. <em>scale_x_log10()</em>)</li>
+<li>Przedstawiane danych przestrzennych (<em>geom_sf()</em>)</li>
+<li>Animacje (pakiet <em>gganimate</em>)</li>
+<li>Wykresy interaktywne (pakiet <em>plotly</em>)</li>
+<li>Inne dodatkowe pakiety - <a href="http://www.ggplot2-exts.org/gallery/" class="uri">http://www.ggplot2-exts.org/gallery/</a></li>
+<li>…</li>
+</ul>
+<div id="kilka-porad" class="section level3">
+<h3><span class="header-section-number">2.19.1</span> Kilka porad</h3>
+<ul>
+<li>nie redukuj!</li>
+<li>nie stosuj wykresów kołowych (!)</li>
+<li>nie stosuj wykresów 3D (!)</li>
+<li>uważaj na osie</li>
+<li>nie stosuj dwóch osi</li>
+</ul>
+<p>There is no data that can be displayed in a pie chart, that cannot be displayed BETTER in some other type of chart. (John Tukey)</p>
+<p>Odnośniki:</p>
+<ul>
+<li><a href="http://priceonomics.com/should-you-ever-use-a-pie-chart/">Should You Ever Use a Pie Chart?</a></li>
+<li><a href="http://twentytwowords.com/ultimate-list-of-funny-pie-charts">The 60 Silliest Pie Charts on the Internet</a></li>
+</ul>
+<hr />
+</div>
+<div id="dodatkowe-zroda-informacji" class="section level3">
+<h3><span class="header-section-number">2.19.2</span> Dodatkowe źródła informacji</h3>
+<ul>
+<li>książka <a href="http://biecek.pl/Eseje/index.html">Odkrywać! Ujawniać! Objaśniać! Zbiór esejów o sztuce prezentowania danych</a></li>
+<li>książka <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a></li>
+<li>książka <a href="http://socviz.co/">Data Visualization: A practical introduction</a></li>
+<li>strona <a href="https://www.data-to-viz.com/">from Data to Viz</a></li>
+<li>strona <a href="http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html">Top 50 ggplot2 Visualizations - The Master List (With Full R Code)</a></li>
+<li>strona <a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a></li>
+<li>post <a href="http://stat545.com/block015_graph-dos-donts.html">Do’s and Don’ts for Effective Graphs</a></li>
+<li>post <a href="http://flowingdata.com/2015/08/11/real-chart-rules-to-follow/">Real Chart Rules to Follow</a></li>
+<li>post <a href="https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368">Mistakes, we’ve drawn a few: Learning from our errors in data visualisation</a></li>
+<li>post <a href="https://cedricscherer.netlify.com/2019/05/17/the-evolution-of-a-ggplot-ep.-1/">The Evolution of a ggplot (Ep. 1)</a></li>
+<li>galeria <a href="http://shiny.stat.ubc.ca/r-graph-catalog/">R Graph Catalog</a></li>
+<li>galeria <a href="https://www.reddit.com/r/dataisugly/">Data is ugly</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="statystyki-opisowe.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="korelacja-i-asocjacja.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

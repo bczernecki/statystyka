@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Statystyki opisowe | Metody statystyczne w hydrologii i klimatologii</title>
+  <meta name="description" content="1 Statystyki opisowe | Metody statystyczne w hydrologii i klimatologii" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Statystyki opisowe | Metody statystyczne w hydrologii i klimatologii" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Statystyki opisowe | Metody statystyczne w hydrologii i klimatologii" />
+  
+  
+  
+
+<meta name="author" content="(07-MSHK-HMiK1-DU)" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="wykresy-statystyczne.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Wprowadzenie</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#kwestie-organizacyjne"><i class="fa fa-check"></i>Kwestie organizacyjne</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zalecana-literatura"><i class="fa fa-check"></i>Zalecana literatura</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ksiazki"><i class="fa fa-check"></i>Książki</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zasoby-www-i-pozostae-zroda"><i class="fa fa-check"></i>Zasoby WWW i pozostałe źródła:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#program-zajec"><i class="fa fa-check"></i>Program zajęć:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html"><i class="fa fa-check"></i><b>1</b> Statystyki opisowe</a><ul>
+<li class="chapter" data-level="1.1" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#skale-pomiarowe-dane-ilosciowe"><i class="fa fa-check"></i><b>1.1</b> Skale pomiarowe (dane ilościowe)</a></li>
+<li class="chapter" data-level="1.2" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#miary-poozenia-tendencji-centralnej"><i class="fa fa-check"></i><b>1.2</b> <strong>Miary położenia (tendencji centralnej)</strong></a></li>
+<li class="chapter" data-level="1.3" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#miary-dyspersji"><i class="fa fa-check"></i><b>1.3</b> <strong>Miary dyspersji </strong></a></li>
+<li class="chapter" data-level="1.4" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#pozostae-uzyteczne-funkcje-statystyczne"><i class="fa fa-check"></i><b>1.4</b> <strong>Pozostałe użyteczne funkcje statystyczne</strong></a><ul>
+<li class="chapter" data-level="" data-path="statystyki-opisowe.html"><a href="statystyki-opisowe.html#wybrane-wzory"><i class="fa fa-check"></i>Wybrane wzory</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html"><i class="fa fa-check"></i><b>2</b> Wykresy statystyczne</a><ul>
+<li class="chapter" data-level="2.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-eksploracyjne"><i class="fa fa-check"></i><b>2.1</b> Wykresy eksploracyjne</a></li>
+<li class="chapter" data-level="2.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-komunikacyjne"><i class="fa fa-check"></i><b>2.2</b> Wykresy komunikacyjne</a></li>
+<li class="chapter" data-level="2.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-w-r"><i class="fa fa-check"></i><b>2.3</b> Wykresy w R</a></li>
+<li class="chapter" data-level="2.4" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2"><i class="fa fa-check"></i><b>2.4</b> ggplot2</a></li>
+<li class="chapter" data-level="2.5" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---pierwszy-wykres"><i class="fa fa-check"></i><b>2.5</b> ggplot2 - pierwszy wykres</a></li>
+<li class="chapter" data-level="2.6" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---podstawowe-informacje"><i class="fa fa-check"></i><b>2.6</b> ggplot2 - podstawowe informacje</a></li>
+<li class="chapter" data-level="2.7" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#ggplot2---podstawowe-sownictwo-skadnia"><i class="fa fa-check"></i><b>2.7</b> ggplot2 - podstawowe słownictwo / składnia</a></li>
+<li class="chapter" data-level="2.8" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zbior-danych"><i class="fa fa-check"></i><b>2.8</b> Zbiór danych</a></li>
+<li class="chapter" data-level="2.9" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram"><i class="fa fa-check"></i><b>2.9</b> Histogram</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#domyslny-silnik-graficzny-r"><i class="fa fa-check"></i><b>2.9.1</b> Domyślny silnik graficzny R</a></li>
+<li class="chapter" data-level="2.9.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#histogram-w-ggplot2"><i class="fa fa-check"></i><b>2.9.2</b> Histogram w ggplot2</a></li>
+<li class="chapter" data-level="2.9.3" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#gestosc-prawdopodobienstwa-ggplot2"><i class="fa fa-check"></i><b>2.9.3</b> Gęstość prawdopodobieństwa ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#przyspieszamy---facet_-i-wykresy-miesieczne"><i class="fa fa-check"></i><b>2.10</b> Przyspieszamy - <code>facet_</code> i wykresy miesięczne</a></li>
+<li class="chapter" data-level="2.11" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-liniowy"><i class="fa fa-check"></i><b>2.11</b> Wykres liniowy</a></li>
+<li class="chapter" data-level="2.12" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-rozrzutu"><i class="fa fa-check"></i><b>2.12</b> Wykres rozrzutu</a><ul>
+<li class="chapter" data-level="2.12.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#dane-ilosciowe-i-jakosciowe-na-wykresach-rozrzutu"><i class="fa fa-check"></i><b>2.12.1</b> Dane ilościowe i jakościowe na wykresach rozrzutu</a></li>
+</ul></li>
+<li class="chapter" data-level="2.13" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykres-pudekowy-box-and-whisker-plots"><i class="fa fa-check"></i><b>2.13</b> Wykres pudełkowy (<em>box and whisker plots</em>)</a></li>
+<li class="chapter" data-level="2.14" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-supkowe"><i class="fa fa-check"></i><b>2.14</b> Wykresy słupkowe</a></li>
+<li class="chapter" data-level="2.15" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wykresy-strukturalne"><i class="fa fa-check"></i><b>2.15</b> Wykresy strukturalne</a></li>
+<li class="chapter" data-level="2.16" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#wskazowki"><i class="fa fa-check"></i><b>2.16</b> Wskazówki</a><ul>
+<li class="chapter" data-level="2.16.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#modyfikacja-wykresow"><i class="fa fa-check"></i><b>2.16.1</b> Modyfikacja wykresów</a></li>
+</ul></li>
+<li class="chapter" data-level="2.17" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zapisywanie-wykresow"><i class="fa fa-check"></i><b>2.17</b> Zapisywanie wykresów</a></li>
+<li class="chapter" data-level="2.18" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#zadania"><i class="fa fa-check"></i><b>2.18</b> Zadania</a></li>
+<li class="chapter" data-level="2.19" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#inne"><i class="fa fa-check"></i><b>2.19</b> Inne</a><ul>
+<li class="chapter" data-level="2.19.1" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#kilka-porad"><i class="fa fa-check"></i><b>2.19.1</b> Kilka porad</a></li>
+<li class="chapter" data-level="2.19.2" data-path="wykresy-statystyczne.html"><a href="wykresy-statystyczne.html#dodatkowe-zroda-informacji"><i class="fa fa-check"></i><b>2.19.2</b> Dodatkowe źródła informacji</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html"><i class="fa fa-check"></i><b>3</b> Korelacja i asocjacja</a><ul>
+<li class="chapter" data-level="3.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-korelacji-liniowej-pearsona-r_xy"><i class="fa fa-check"></i><b>3.1</b> Współczynnik korelacji liniowej Pearsona (<span class="math inline">\(r_{xy}\)</span>)</a></li>
+<li class="chapter" data-level="3.2" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#trening---zgadnij-wartosc-korelacji"><i class="fa fa-check"></i><b>3.2</b> Trening - zgadnij wartość korelacji</a></li>
+<li class="chapter" data-level="3.3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-determinacji-r2"><i class="fa fa-check"></i><b>3.3</b> Współczynnik determinacji <span class="math inline">\(r^2\)</span></a></li>
+<li class="chapter" data-level="3.4" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#wspoczynnik-korelacji-rang-spearmana-r_s"><i class="fa fa-check"></i><b>3.4</b> Współczynnik korelacji rang Spearman’a <span class="math inline">\(r_s\)</span></a></li>
+<li class="chapter" data-level="3.5" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#obliczenia-wspoczynnika-korelacji-w-r"><i class="fa fa-check"></i><b>3.5</b> Obliczenia współczynnika korelacji w R</a></li>
+<li class="chapter" data-level="3.6" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#nao-a-temperatura-powietrza-i-opady-atmosferyczne-w-polsce"><i class="fa fa-check"></i><b>3.6</b> NAO a temperatura powietrza i opady atmosferyczne w Polsce</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#dane"><i class="fa fa-check"></i><b>3.6.1</b> Dane</a></li>
+<li class="chapter" data-level="3.6.2" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zadanie-1"><i class="fa fa-check"></i><b>3.6.2</b> Zadanie 1</a></li>
+<li class="chapter" data-level="3.6.3" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zadanie-2"><i class="fa fa-check"></i><b>3.6.3</b> Zadanie 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#warto-pamietac---zaozenia-analizy-korelacji"><i class="fa fa-check"></i><b>3.7</b> Warto pamiętać - Założenia analizy korelacji</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="korelacja-i-asocjacja.html"><a href="korelacja-i-asocjacja.html#zalecane-materiay-uzupeniajace"><i class="fa fa-check"></i><b>3.7.1</b> zalecane materiały uzupełniające:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Metody statystyczne w hydrologii i klimatologii</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="statystyki-opisowe" class="section level1">
+<h1><span class="header-section-number">1</span> Statystyki opisowe</h1>
+<div id="skale-pomiarowe-dane-ilosciowe" class="section level2">
+<h2><span class="header-section-number">1.1</span> Skale pomiarowe (dane ilościowe)</h2>
+<ul>
+<li><p><strong>Skala ilorazowa</strong> - skala, która posiada sens fizyczny dla różnic i ilorazów; ceny, wzrost</p></li>
+<li><p><strong>Skala przedziałowa</strong> - skala posiada sens fizyczny dla różnic, ale nie dla ilorazów; temperatura w stopniach Celcjusza, daty</p></li>
+<li><p><strong>Skala porządkowa</strong> - posiada fizyczny sens dla kolejności wartości; wzrost w kategoriach (“mały” &lt; “średni” &lt; “duży”), oceny</p></li>
+<li><p><strong>Skala nominalna</strong> - nie posiada fizycznego sensu dla dobranych wartości; kody pocztowe, numery telefonów</p></li>
+</ul>
+</div>
+<div id="miary-poozenia-tendencji-centralnej" class="section level2">
+<h2><span class="header-section-number">1.2</span> <strong>Miary położenia (tendencji centralnej)</strong></h2>
+<ul>
+<li>średnia arytmetyczna (<em>mean</em>),</li>
+<li>mediana (<em>median</em>),</li>
+</ul>
+<p>Mediana a średnia</p>
+<pre><code>w wypadku symetrycznego rozkładu te dwie cechy są równe
+średnia jest bardziej wrażliwa na wartości odstające
+mediana jest lepszą miarą środka danych, jeżeli są one skośne</code></pre>
+<p>Po co używać średniej?</p>
+<pre><code>przydatniejsza w przypadku małych zbiorów danych
+gdy rozkład danych jest symetryczny
+(jednak) często warto podawać obie miary</code></pre>
+<ul>
+<li>dominanta (moda) (<em>table</em>),</li>
+<li><p>kwantyle (kwartyle, decyle) (<em>quantile</em>)</p>
+<p>kwantyle rzędu 1/100, 2/100,…, 99/100 to inaczej percentyle
+percentyle dzielą dane na sto grup
+n-ty percentyl to taka wartość, poniżej której znajduje się n procent danych
+kwantyl rzędu 1/2 to mediana (pięćdziesiąty percentyl)
+kwantyle rzędu 1/4, 2/4, 3/4 są kwartylami
+mediana dolnej połowy danych, czyli dwudziesty piąty percentyl zwana jest również pierwszym kwartylem (Q1)
+mediana górnej połowy danych, czyli siedemdziesiąty piąty percentyl zwana jest również trzecim kwartylem (Q3)</p></li>
+</ul>
+</div>
+<div id="miary-dyspersji" class="section level2">
+<h2><span class="header-section-number">1.3</span> <strong>Miary dyspersji </strong></h2>
+<ul>
+<li><p>odchylenie standardowe, (<em>sd</em>)</p>
+<p>miara tego, jak daleko dane rozchodzą się od średniej
+odchylenie standardowe jest pierwiastkiem z wariancji
+jeżeli wartości są blisko średniej - SD będzie niewielkie
+jeżeli wartości są daleko od średniej - SD będzie duże</p></li>
+<li>odchylenie przeciętne / średnie odchylenie bezwzględne (<em>mad</em>),</li>
+<li><p>wariancja, (<em>var</em>)</p>
+<p>jednostkami wariancji jest kwadrat oryginalnej jednostki</p></li>
+<li>współczynnik zmienności, (<em>sd/mean</em>)</li>
+<li><p>rozstęp (<em>max - min</em>),</p></li>
+</ul>
+<p>Różnica pomiędzy wartościami skrajnymi w zbiorze. Nie są brane pod uwagę żadne inne wartości</p>
+<ul>
+<li>rozstęp miedzykwartylowy (<em>IQR</em>)</li>
+</ul>
+<p>Różnica pomiędzy trzecim i pierwszym kwartylem to rozstęp kwartylny/odchylenie kwartylne/odchylenie ćwiartkowe (IQR. od ang. “interquartile range”), im większa szerokość rozstępu kwartylnego, tym większe zróżnicowanie cechy (IQR = Q3 - Q1)</p>
+<ul>
+<li>rozstęp decylowy (Q90-Q10)</li>
+</ul>
+</div>
+<div id="pozostae-uzyteczne-funkcje-statystyczne" class="section level2">
+<h2><span class="header-section-number">1.4</span> <strong>Pozostałe użyteczne funkcje statystyczne</strong></h2>
+<ul>
+<li>(<em>summary</em>)</li>
+<li>(<em>unique</em>)</li>
+<li>(<em>table</em>)</li>
+</ul>
+<div id="wybrane-wzory" class="section level3 unnumbered">
+<h3>Wybrane wzory</h3>
+<p>Średnia arytmetyczna
+<span class="math display">\[
+\bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
+\]</span>
+Odchylenie przeciętne
+<span class="math display">\[
+V=\frac{1}{n}\sum\limits_{i=1}^{n}\left| x_i-\bar{x}\right|
+\]</span>
+Współczynnik zmienności
+<span class="math display">\[
+V = \frac{s}{\bar{x}}
+\]</span></p>
+<p>Wariancja (dla populacji generalnej)
+<span class="math display">\[
+\sigma^2=\frac{\sum\limits_{i=1}^{n} (x_i-\mu)^2}{n}
+\]</span>
+Wariancja (dla próby)
+<span class="math display">\[
+s^2=\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^2}{n-1}
+\]</span>
+Odchylenie standardowe (dla populacji)
+<span class="math display">\[
+\sigma=\sqrt{\frac{\sum\limits_{i=1}^{n} (x_i-\mu)^2}{n}}
+\]</span>
+Odchylenie standardowe (dla próby)
+<span class="math display">\[
+s=\sqrt{\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^2}{n-1}}
+\]</span></p>
+<p><em>Zadanie 1</em>
+Wykorzystując zamieszczone poniżej dane oraz informacje przekazane przez prowadzącego uzupełnij poniższą tabelę.</p>
+<pre><code>12, 24, 9, 16, 12, 8, 6, 17, 11, 16, 21</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Miara</th>
+<th>Wartość</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\bar{x}\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Kwartyl 1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Średnia</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Mediana</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Moda</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Dominanta</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Kwartyl 3</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Współczynnik zmienności</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Odchylenie standardowe</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Wariancja</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Rozstęp międzykwartylowy</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rozstęp decylowy</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wykresy-statystyczne.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

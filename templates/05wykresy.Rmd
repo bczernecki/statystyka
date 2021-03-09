@@ -1,0 +1,183 @@
+# Wykresy statystyczne
+
+<!-- # Wykresy statystyczne -->
+<!-- Poniżej zamieszczono najcześciej spotykane w badaniach statystycznych wykresy. -->
+<!-- ```{r include=FALSE} -->
+<!-- library(ggplot2) -->
+<!-- library(dplyr) -->
+<!-- library(lubridate) -->
+<!-- library(tidyr) -->
+<!-- library(ggpubr) -->
+<!-- load("data/am8d.rda") -->
+<!-- ``` -->
+<!-- ## Histogram -->
+
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = PM10d)) + -->
+<!--          geom_histogram(col = 1) + -->
+<!--   labs( -->
+<!--     title = "Rozkład empiryczny stężeń PM10 na stacji AM8", -->
+<!--     subtitle = "", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Stężenie PM10", -->
+<!--     y = "Liczba przypadków" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+
+<!-- Lub w wersji z gęstością prawdopodbieństwa na osi y. Jest to podejście bardziej wszechstronne, ponieważ umożliwia porównywanie rozkładów zmiennych między sobą a dodatkowo umożliwia umieszczanie dodatkowych "warstw" (np. wynikających z zastosowania jądrowych estymatorów gęstości prawdopodobieństwa). -->
+
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = PM10d)) + -->
+<!--          geom_histogram(col = 1, aes(y = ..density..)) + -->
+<!--   geom_density(fill = "orange", alpha  = 0.3) + -->
+<!--   labs( -->
+<!--     title = "Rozkład empiryczny stężeń PM10 na stacji AM8", -->
+<!--     subtitle = "", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Stężenie PM10", -->
+<!--     y = "PDF" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+
+<!-- Porównanie rozkładów PM10 w miesiącach -->
+
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = PM10d)) + -->
+<!--         # geom_histogram(col = 1, aes(y = ..density..)) + -->
+<!--   geom_density(fill = "orange", alpha  = 0.3) + -->
+<!--   facet_wrap(~MONTH) + -->
+<!--   labs( -->
+<!--     title = "Stężenia PM10 na stacji AM8", -->
+<!--     subtitle = "", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Stężenie PM10", -->
+<!--     y = "PDF" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+
+
+<!-- ## Pudełko z wąsami (Box-and-whisker plot) -->
+
+<!-- Jest to wyjątkowo przydatny wykres obrazujący "za jednym zamachem" kilka cech analizowanej zmiennej np.: kwantyl 10%, kwantyle 25%, 50%, 75% oraz 90% (oczywiście tutaj można wykorzystać własne upodobania i np zamiast kwantyli 10%/90% zastosować wartość minimalną i maksymalną). -->
+
+<!-- ```{r echo=FALSE} -->
+<!--  f <- function(x) { -->
+<!--     r <- quantile(x, probs = c(0.1, 0.25, 0.5, 0.75, 0.9), na.rm = T) -->
+<!--     names(r) <- c("ymin", "lower", "middle", "upper", "ymax") -->
+<!--     r -->
+<!--     } -->
+
+<!-- ggplot(am8d, aes(x = as.factor(MONTH), y = TEMPd)) + -->
+<!--  stat_summary(fun.data = f, geom="errorbar", width = 0.3) + -->
+<!--     stat_summary(fun.data = f, geom="boxplot") + -->
+<!-- labs( -->
+<!--     title = "Roczny przebieg temperatury powietrza", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Miesiąc", -->
+<!--     y = "Temperatura powietrza" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = as.factor(MONTH), y = PM10d)) + -->
+<!--  stat_summary(fun.data = f, geom="errorbar", width = 0.3) + -->
+<!--     stat_summary(fun.data = f, geom="boxplot") + -->
+<!-- labs( -->
+<!--     title = "Roczny przebieg stężeń PM10", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Miesiąc", -->
+<!--     y = "Stężenie PM10" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+
+<!-- ## Wykres liniowy -->
+
+<!-- ```{r echo=FALSE} -->
+<!-- ggplot(am8d, aes(x = DATE, y = PM10d)) + -->
+<!--   geom_line()+ -->
+<!--   geom_hline(yintercept = 50, col = 2, size = 0.5, lty = 3) + -->
+<!--   labs( -->
+<!--     title = "Przebieg dobowych stężeń PM10 (2010-2015)", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Data", -->
+<!--     y = "Stężenie PM10" -->
+<!--     ) + -->
+<!--   scale_x_date(date_breaks = "2 month") + -->
+<!--   theme_bw() + -->
+<!--   theme(axis.text.x = element_text(angle = 90, hjust = 0.5)) -->
+<!-- ``` -->
+
+<!-- ## Wykresy strukturalne -->
+
+<!-- ```{r echo=FALSE } -->
+
+<!-- am8d %>% -->
+<!--   mutate(PM10hi = ifelse(PM10d>50, 1, 0)) -> am8d -->
+
+<!-- ggplot(am8d, aes(x = as.factor(MONTH))) + -->
+<!--   geom_bar(position = "fill", aes(fill = as.factor(PM10hi)))+ -->
+<!--   labs( -->
+<!--     title = "Przekroczenia normy dobowego stężenia PM10 - struktura miesięczna", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Miesiąc", -->
+<!--     y = "%", -->
+<!--     fill = "Przekroczenie" -->
+<!--     ) + -->
+<!--   theme_bw() -->
+<!-- ``` -->
+
+<!-- ```{r echo=FALSE } -->
+
+<!-- am8d %>% -->
+<!--   mutate(PM10hi = ifelse(PM10d>50, 1, 0)) -> am8d -->
+
+<!-- ggplot(am8d, aes(x = as.factor(MONTH))) + -->
+<!--   geom_bar(position = "fill", aes(fill = as.factor(PM10hi)))+ -->
+<!--   labs( -->
+<!--     title = "Przekroczenia normy dobowego stężenia PM10 - struktura miesięczna", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Miesiąc", -->
+<!--     y = "%", -->
+<!--     fill = "Przekroczenie" -->
+<!--     ) + -->
+<!--   theme_bw() + -->
+<!--   facet_wrap(~YEAR) -->
+<!-- ``` -->
+
+<!-- ## Wykresy rozrzutu (XY) -->
+
+<!-- ```{r echo=FALSE} -->
+
+<!-- ggplot(am8d, aes(x = TEMPd, y = PM10d)) + -->
+<!--   geom_point(alpha = 0.3)+ -->
+<!--   geom_smooth(method = "lm")+ -->
+<!--   facet_wrap(~MONTH, scale = "free") + -->
+<!-- labs( -->
+<!--     title = "Dobowe stężenia PM10 vs średnia dobowa temperatura powietrza", -->
+<!--     subtitle = "Stacja: AM8", -->
+<!--     caption = "źródło: ARMAAG (jittered)", -->
+<!--     x = "Temperatura", -->
+<!--     y = "Stężenie PM10" -->
+<!--     ) + -->
+<!--   stat_cor(method = "spearman", -->
+<!--                label.x.npc = 0.5, -->
+<!--                label.y.npc = 1) -->
+<!-- ``` -->
+
+<!-- ## Zadania -->
+
+<!-- Wykorzystując tabele z Zadania 3 narysuj nastepujące wykresy: -->
+
+<!-- 1. Wykres liniowy maksymalnej, średniej oraz minimalnej dobowej temperatury powietrza -->
+<!-- 2. Wykres strukturalny w podziale na dekady odnoszący się do udziału dni ze średnią temperaturą powietrza poniżej 0 &deg; C -->
+<!-- 3. Box-and-whisker plot dla nastepujących charakterystyk: minimum, Q1, Q2(Me), Q3, maksimum. -->

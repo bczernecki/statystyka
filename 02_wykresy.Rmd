@@ -1,0 +1,413 @@
+# Wykresy statystyczne
+
+## Wykresy eksploracyjne
+
+- służą głównie dla ich twórcy
+- kluczową ich cechą jest możliwość iteracji
+
+
+## Wykresy komunikacyjne
+
+- służą głównie przekazaniu wiedzy
+- ich stworzenie wymaga czasu
+- ważny jest dobór podpisów, kolorów, etc.
+
+
+## Wykresy w R
+
+- istnieje wiele różnych możliwości tworzenia wykresów w R
+- najczęściej używane to **podstawowe silnik graficznych** oraz pakiet **ggplot2**
+
+## ggplot2 
+
+```{r}
+library(ggplot2)
+```
+
+## ggplot2 - pierwszy wykres
+
+```{r, fig.align='center',fig.height=4}
+df = data.frame(A = c(1:10), B = seq(22, 4, by = -2))
+```
+```{r, fig.align='center',fig.height=4}
+ggplot(data = df, aes(x = A, y = B)) + 
+  geom_point()
+```
+
+## ggplot2 - podstawowe informacje
+
+- pakiet jest implementacją założeń zawartych w książce "Grammar of Graphics" Lelanda Wilkinsona
+- ramka danych (`data.frame`) jest zazwyczaj wymaganą klasą obiektu danych wejściowych (w tzw. postaci wąskiej)
+- istnieją dwie komendy pozwalające na tworzenie wykresów - *qplot* oraz *ggplot*
+- pełna dokumentacja znajduje się na stronie - http://docs.ggplot2.org oraz https://ggplot2-book.org/
+- przydatny, zwłaszcza na początku pracy może okazać się *cheat sheet* https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
+
+
+## ggplot2 - podstawowe słownictwo / składnia
+
+- **geom** - oznacza typ wykresu (np. "histogram", "boxplot", "point", etc.)
+- aesthetics (**aes**) - oznacza kształt, kolor, wielkość, etc.
+- facets (**facet**) - oznacza wykresy dla podzbiorów
+- kolejne elementy składni dodawane za pomocą `+`
+
+## Zbiór danych
+
+- Dane godzinowe i dobowe koncentracji zanieczyszczeń atmosferycznej na jednej ze stacji monitoringu jakości powietrza + podstawowe dane meteorologiczne
+- Dane obserwacyjne (w minimalnym stopniu zaszumione)
+- Pobierz pliki ("am8d.rda" i "am8_final.rda") lub wczytaj dane bezpośrednio ze strony: www.enwo.pl/student 
+- Zapoznaj się ze strukturą tych plików
+
+
+```{r include=FALSE}
+library(ggpubr)
+load("data/am8d.rda")
+load("data/am8_final.rda")
+```
+
+
+---
+
+## Histogram
+
+- stworzony przez Karla Pearsona
+- jest graficzną reprezentacją rozkładu <br> danych
+- wartości danych są łączone w przedziały (na osi poziomej) a na osi pionowej jest ukazana liczba punktów (obserwacji) w każdym przedziale
+- różny dobór przedziałów może dawać inną informację
+- w pakiecie ggplot2, przedział to domyślnie zakres/30
+
+
+### Domyślny silnik graficzny R 
+
+- funkcja `hist` (np. na danych dobowych dla koncentracji PM10)
+
+```{r echo=TRUE}
+hist(am8d$PM10d)
+```
+
+Możliwość dalszego ulepszania wyglądu histogramu za pomocą standardowych opcji graficznych. Szczegółowe informacje: `?plot`, `?hist`.
+
+Najważniejsze argumenty:
+
+- `main` - zmiana tytułu wykresu
+- `xlab`, `ylab` - zmiana podpisów osi X i Y
+- `col` - zmiana koloru wykresu
+- `grid` - dodanie siatki dla dowolnie zdefiniowanych argumentów graficznych (`lty = ` - typ linii, `col` - kolor, `lwd` - grubość linii, itd...)
+- `abline` (wraz z argumentami) - dodanie linii (najczęściej z argumentami `h=` i `v=`)
+- `text` - dodanie dowolnego tekstu w określonych współrzędnych histogramu
+
+
+### Histogram w ggplot2
+
+- geom - `geom_histogram()`
+
+```{r echo=TRUE}
+ggplot(data = am8d, aes(x = PM10d)) +
+  geom_histogram()
+```
+
+Argumenty pozwalające na ulepszenie wykresu:
+
+- `binwidth` - zmiana szerokości przedziałów histogramu (wewnątrz `geom_histogram`)
+- `col` - zmiana koloru linii histogramu (wewnątrz `geom_histogram`)
+- `fill` - zmiana koloru wypełnienia histogramu (wewnątrz `geom_histogram`)
+- `labs` - dostosowanie podpisów wykresu. Argumenty: `title`, `subtitle`, `caption`, `x`, `y`
+- themes - zmiana szaty graficznej wykresu na podstawie jednego ze zdefiniowanych szablonów
+
+
+```{r echo=TRUE}
+ggplot(am8d, aes(x = PM10d)) +
+         geom_histogram(col = 1) +
+  labs(
+    title = "Rozkład empiryczny stężeń PM10 na stacji AM8",
+    subtitle = "",
+    caption = "źródło: ARMAAG ()",
+    x = "Stężenie PM10",
+    y = "Liczba przypadków"
+    ) +
+  theme_bw()
+```
+
+
+### Gęstość prawdopodobieństwa ggplot2
+
+Rozkład danych można także przedstawić za pomocą  gęstością prawdopodbieństwa na osi y. Jest to podejście bardziej wszechstronne, ponieważ umożliwia porównywanie rozkładów zmiennych między sobą a dodatkowo umożliwia umieszczanie dodatkowych "warstw" (np. wynikających z zastosowania jądrowych estymatorów gęstości prawdopodobieństwa)
+
+- geom - `geom_density()`
+
+
+```{r echo=TRUE}
+ggplot(am8d, aes(x = PM10d)) +
+  geom_histogram(col = 1, aes(y = ..density..)) +
+  geom_density(fill = "orange", alpha  = 0.3) +
+  labs(
+    title = "Rozkład empiryczny stężeń PM10 na stacji AM8",
+    subtitle = "",
+    caption = "źródło: ARMAAG (jittered)",
+    x = "Stężenie PM10",
+    y = "PDF"
+    ) +
+  theme_bw()
+```
+
+
+
+## Przyspieszamy - `facet_` i wykresy miesięczne
+
+- Mając stworzony szablon wykresu można w łatwy sposób zautomatyzować proces naszych analiz po tzw. zmiennej grupującej
+- Przykładowo, jeśli chcemy stworzyć 12 wykresów dla miesięcy możemy dodać kolejny fragment kodu `ggplota` którym jest `facet_wrap` bądź `facet_grid` a następnie podać po znaku tyldy (`~`) kolumne z unikalnymi wartościami:
+
+```{r echo=FALSE}
+ggplot(am8d, aes(x = PM10d)) +
+        # geom_histogram(col = 1, aes(y = ..density..)) +
+  geom_density(fill = "orange", alpha  = 0.3) +
+  facet_wrap(~MONTH) +
+  labs(
+    title = "Stężenia PM10 na stacji AM8",
+    subtitle = "",
+    caption = "źródło: ARMAAG (jittered)",
+    x = "Stężenie PM10",
+    y = "PDF"
+    ) +
+  theme_bw()
+```
+
+
+## Wykres liniowy
+
+- Jeden z najbardziej podstawowych typów wykresu, najczęściej stosowany w naukach atmosferycznych do zaprezentowania dynamiki zmiennych typu ciągłego
+
+- geom - `geom_line`
+
+- Spróbujmy na początek "przyciąć" nasz zbiór danych dobowych tylko do roku 2010 i zapiszmy go jako **am2010**
+
+- Następnie stwórzmy wykres liniowy dla temperatury powietrza (kolumna `TEMPd`)
+
+
+```{r}
+library(dplyr)
+am2010 = am8d %>% filter(YEAR == 2010) 
+```
+
+```{r, fig.align='center',fig.height=4, message=FALSE, warning=FALSE}
+ggplot(data = am2010, aes(x = DATE, y = TEMPd)) + 
+  geom_line()
+```
+
+- Jeśli chcemy dodać kolejną linię do naszego wykresu bez próby konwersji ramki danych do postaci wąskiej konieczne jest dodanie kolejnego `geom_line`
+
+```{r, fig.align='center',fig.height=4, message=FALSE, warning=FALSE}
+ggplot(data = am2010, aes(x = DATE, y = TEMPd)) + 
+  geom_line()+
+  geom_line(aes(y = PM10d, colour = "blue"))
+```
+  
+
+## Wykres rozrzutu
+
+Najbardziej podstawowym (wizualnym) sposobem przedstawienia relacji pomiędzy dwoma zmiennymi jest wykres rozrzutu.
+
+W podstawowym silniku graficznym **R** można do tego celu wykorzystać funkcję `plot` definiując zakresy dla osi X i Y. Spróbujmy wykreślić zależność pomiędzy koncentracją PM10 i temperaturą powietrza w miesiącach sezonu zimowego:
+
+```{r, fig.align='center',fig.height=4, message=FALSE, warning=FALSE}
+zima = dplyr::filter(am8d, MONTH %in% c(12,1,2))
+plot(zima$TEMPd, zima$PM10d)
+```
+
+
+
+Dla pakietu `ggplot2` ten sam efekt można osiągnać
+
+```{r, fig.align='center',fig.height=4, message=FALSE, warning=FALSE}
+ggplot(data = zima, aes(x = TEMPd, y = PM10d)) + 
+  geom_point()
+```
+
+### Dane ilościowe i jakościowe na wykresach rozrzutu
+
+
+Zaprezentowanie dodatkowej zmiennej/zmiennych na wykresach rozrzutu jest możliwe poprzez uwzględnienie danej cechy jako koloru, rozmiaru lub kształtu. 
+
+Dla standardowego silnik graficznego **R** ww. argumenty graficzne to `col`, `cex` i `pch`:
+
+```{r, fig.align='center',fig.height=4, message=FALSE, warning=FALSE}
+zima$kolor = ifelse(zima$MONTH>2, 3, zima$MONTH)
+plot(zima$TEMPd, zima$PM10d, col= zima$kolor)
+plot(zima$TEMPd, zima$PM10d, cex = zima$kolor)
+plot(zima$TEMPd, zima$PM10d, pch= zima$kolor)
+```
+
+Dla pakietu `ggplot` będą to argumenty: `color`, `size` i `shape`:
+
+```{r, fig.align='center',fig.height=4}
+ggplot(data = zima, aes(x = TEMPd, y = PM10d, color = MONTH)) + 
+  geom_point()
+```
+Powstała paleta barwna ma charakter "ciągły", co wynika z liczbowego charakteru zmiennej `MONTH`. Możemy ją także przekazać w sposób kategoryczny:
+
+```{r, fig.align='center',fig.height=4}
+ggplot(data = zima, aes(x = TEMPd, y = PM10d, color = as.factor(MONTH))) + 
+  geom_point()
+```
+
+Następnie możemy modyfikować wielkość punktów, np. w zależności od np. (odwrotności) prędkości wiatru. Jak zinterpretujesz poniższy wykres?
+
+```{r, fig.align='center',fig.height=4}
+ggplot(data = zima, aes(x = TEMPd, y = PM10d, color = as.factor(MONTH), size = round(1/VELd))) + 
+  geom_point(alpha=0.8)
+```
+
+Na koniec sprawdźmy działanie argumentu `shape` np. dla miesięcy:
+
+```{r, fig.align='center',fig.height=4}
+ggplot(data = zima, aes(x = TEMPd, y = PM10d, shape = as.factor(MONTH))) + 
+  geom_point(alpha=0.8, size=3)
+```
+
+
+## Wykres pudełkowy (*box and whisker plots*)
+
+Istnieje przynajmniej kilka wersji stosowanych wykresów pudełkowych, które stosuje się do przedstawienia typowych zakresów zmienności zjawiska. Jedna z implementacji wykresów pudełkowych obrazuje:
+
+- pięć podstawowych statystyk opisowych oraz wartości odstające
+- "pudełko"" to zakres międzykwantylowy
+- linie oznaczają najbardziej ekstremalne wartości, ale nie odstające. Górna to 1,5\*IQR ponad krawędź pudełka, dolna to 1,5\*IQR poniżej wartości dolnej krawędzi pudełka; możliwa jest także implementacja z zakresem np. skrajnie niskich i wysokich wartości kwantyli
+- linia środkowa to mediana
+- "kropki" oznaczają wartości odstające
+
+Poniżej zamieszczono przykładowy kod ilustrujący charakterystyczne zakresy wartości temperatur powietrza  w poszczególnych miesiącach:
+
+```{r,fig.height=4, fig.width=4, eval=FALSE}
+ggplot(am8d, aes(x = as.factor(MONTH), y = TEMPd)) + 
+  geom_boxplot()+
+ labs( 
+     title = "Roczny przebieg temperatury powietrza", 
+     subtitle = "Stacja: AM8", 
+     caption = "źródło: ARMAAG (jittered)", 
+     x = "Miesiąc", 
+     y = "Temperatura powietrza" 
+     ) + 
+   theme_bw() 
+```
+
+
+## Wykresy słupkowe
+
+Dla wizualizacji elementów nieciągłych dobrym sposobem są wykresy słupkowe definiowane za pomocą geom'u: `geom_bar`. Spróbujmy przedstawić liczbę przypadków z przkeroczeniem dobowej normy PM10 w poszczególnych miesiącach:
+
+```{r echo=TRUE}
+# przygotowanie dodatkowej kolumny z przekroczeniami PM10>50uq/m3
+am8d$PM10hi = ifelse(am8d$PM10d>50, 1, 0)
+tabelka = am8d %>% group_by(MONTH) %>% summarise(suma = sum(PM10hi)) # zliczamy liczbe przypadkow w miesiacach
+str(tabelka)
+
+ggplot(tabelka, aes(as.factor(MONTH), suma)) + geom_bar(stat = "identity")
+
+```
+
+
+## Wykresy strukturalne
+
+Wykresy słupkowe mogą być rozwinięte do postaci wykresów strukturalnych. 
+
+```{r echo=TRUE}
+
+
+ggplot(am8d, aes(x = as.factor(MONTH))) +
+   geom_bar(position = "fill", aes(fill = as.factor(PM10hi)))+ 
+   labs( 
+     title = "Przekroczenia normy dobowego stężenia PM10 - struktura miesięczna", 
+     subtitle = "Stacja: AM8", 
+     caption = "źródło: ARMAAG (jittered)", 
+     x = "Miesiąc", 
+     y = "%", 
+     fill = "Przekroczenie" 
+     ) + 
+   theme_bw() 
+```
+
+
+## Wskazówki
+
+### Modyfikacja wykresów
+
+Wykresy `ggplota` nie muszą generowane jednorazowo. Mogą być one zapisane do obiektu a następnie zmodyfikowane i wywołane poprzez nazwę stworzonego obiektu. 
+Podany sposób postępowania można przedstawić na poniższym przykładzie rysowania dystrybuanty dla koncentracji średniej dobowej PM10:
+
+```{r, tidy=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=4}
+p = ggplot(am8d, aes(PM10d)) + stat_ecdf(geom = "step", lwd=2)
+
+p = p +
+  labs(x = "Prawdopodobieństwo [%]",
+       y = "PM10 [ug/m3]")
+p
+```
+
+## Zapisywanie wykresów
+
+Wykresy mogą być zapisane do postaci pliku graficznego na kilka sposobów. Najbardziej intuicyjne będzie wykorzystanie okna plot. Większą kontrolę można uzyskać z poziomu linii komend. Poniżej podano przykładowe 2 wywołania funkcji `ggsave`
+
+
+```{r, tidy=FALSE, message=FALSE, eval=FALSE}
+ggsave(filename = "Wykres.pdf", plot = p)
+```
+
+```{r, tidy=FALSE, message=FALSE, eval=FALSE}
+ggsave(filename = "Wykres.png", plot = p, dpi = 300)
+```
+
+
+## Zadania
+
+
+Wykorzystując dane godzinowe narysuj nastepujące wykresy:
+
+1. Wykres liniowy maksymalnej, średniej oraz minimalnej dobowej temperatury powietrza 
+2. Histogram prędkości wiatru dla (a) całego roku (b) w ujęciu miesięcznym
+3. Wykres pudełkowy dla wilgotności względnej powietrza w ujęciu miesięcznym
+4. Stwórz wykres dystrybuanty temperatury powietrza dla (a) całego roku (b) w ujęciu miesięcznym. Zapisz wykres do dowolnie nazwanego obiektu
+5. Zmodyfikuj zapisany w pkt 4. obiekt dodając nowe podpisy osi. Następnie sprawdź działanie funkcji graficznej `coord_flip()`
+
+
+
+## Inne
+
+- Kolejne typy wykresów (inne *geomy*)
+- Przekształanie danych na wykresach (np. *scale_x_log10()*)
+- Przedstawiane danych przestrzennych (*geom_sf()*)
+- Animacje (pakiet *gganimate*)
+- Wykresy interaktywne (pakiet *plotly*)
+- Inne dodatkowe pakiety - http://www.ggplot2-exts.org/gallery/
+- ...
+
+### Kilka porad
+
+- nie redukuj!
+- nie stosuj wykresów kołowych (!)
+- nie stosuj wykresów 3D (!)
+- uważaj na osie
+- nie stosuj dwóch osi
+
+
+There is no data that can be displayed in a pie chart, that cannot be displayed BETTER in some other type of chart. (John Tukey)
+
+
+Odnośniki:
+
+- [Should You Ever Use a Pie Chart?](http://priceonomics.com/should-you-ever-use-a-pie-chart/)
+- [The 60 Silliest Pie Charts on the Internet](http://twentytwowords.com/ultimate-list-of-funny-pie-charts)
+
+---
+### Dodatkowe źródła informacji
+
+- książka [Odkrywać! Ujawniać! Objaśniać! Zbiór esejów o sztuce prezentowania danych](http://biecek.pl/Eseje/index.html)
+- książka [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+- książka [Data Visualization: A practical introduction](http://socviz.co/)
+- strona [from Data to Viz](https://www.data-to-viz.com/)
+- strona [Top 50 ggplot2 Visualizations - The Master List (With Full R Code)](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
+- strona [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
+- post [Do’s and Don’ts for Effective Graphs](http://stat545.com/block015_graph-dos-donts.html)
+- post [Real Chart Rules to Follow](http://flowingdata.com/2015/08/11/real-chart-rules-to-follow/)
+- post [Mistakes, we’ve drawn a few: Learning from our errors in data visualisation](https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368)
+- post [The Evolution of a ggplot (Ep. 1)](https://cedricscherer.netlify.com/2019/05/17/the-evolution-of-a-ggplot-ep.-1/)
+- galeria [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)
+- galeria [Data is ugly](https://www.reddit.com/r/dataisugly/)

@@ -1,0 +1,178 @@
+# Szereg rozdzielczy przedziałowy
+```{r include=FALSE}
+library(dplyr)
+```
+
+Zanim rozpoczniemy zmagania z szeregiem rozdzielczym przedziałowym, zamieszczam krótkie graficzne podsumowanie typów/rodzajów szeregów statystycznych przygotowane przez Michała Kitowskiego
+![Szeregi Statystyczne](pdfs/szeregi_stat.png)
+
+## Wprowadzenie
+
+Praca na szeregu szczegółowym jest z reguły utrudniona, ze względu na liczebność próby. Tak długo, dopóki pracujemy na stosunkowo niewielkich próbach możliwe są obliczenia "ręczne", jednak dla prób większych (o ile nie posługujemy się oprogramowaniem np.: Excell, R, itp.) lepiej posłużyć sie szeregiem rozdzielczym przedziałowym.
+
+Każdy szereg szczegółowy można przekształcić w szereg rozdzielczy. Dokonując podziału zakresu zmienności naszej zmiennej na przedziały i określając liczebność przypadków w poszczególnych przedziałach.
+
+Imaginujmy sobie, że pracujemy na zbiorze o liczebności $n=200$ dotyczącym zmiennej $A$.
+
+```{r echo=FALSE}
+load("dane.rda")
+dane
+```
+
+Obliczenia wartości średniej (wynoszącej w tym wypadku `r round(mean(dane), digits = 2)`), nie wspominając o wariancji, odchyleniu standardowym czy też miarach skośności lub kurtozy byłyby w tym wypadku, delikatnie mówiąc, _męczące_. Ale można dokonac podziału tego zbioru na przedziały a wówczas obliczenia te staną się zdecydowanie mniej absorbujące.
+
+Liczba przedziałów powinna być dobrana _z głową_. W podręcznikach statystyki można dopatrzyć się przynajmniej kilku metod określania liczby przedziałów. Osobiście preferuję najprostszą z nich czyli $\sqrt{n}$, gdzie $n$ to liczebność próby. Tak więc w naszym przypadku liczba przedziałów to `r sqrt(length(dane))`.
+
+Nie należy się oczywiście zbytnio przywiązywać do liczb po przecinku... załóżmy więc, ze w naszym przypadku optymalna liczba przedziałów to 14 lub 15. 
+Kolejnym krokiem jest określenie granic tych przedziałów i tutaj pomoże nam miara rozproszenia nazywaną *rozrzutem* lub *rozstępem*, czyli różnica między maksimum a minimum. Minimum i maksimum to odpowiednio `r range(dane)`. A rozstęp wynosi `r diff(range(dane))`. Czyli musimy tą wartości podzielic na np 14 (liczba przedziałów) - efekt: `r diff(range(dane))/14`. 
+
+Wynik jest mocno niepraktyczny. I właśnie w tym momencie nalezy użyć wspomnianej wcześniej _głowy_. Osobiście sprawdziłbym jeszcze ile wynosi wartość rozstępu podzielona przez 15 - `r diff(range(dane))/15` i krakowskim targiem uznałbym że rozpiętość przedziału, ktorej szukamy to 0.75 (pamiętajcie, że później nasza tabela przedstawiająca szereg rozdzielczy przedziałowy powinna sensownie się prezentować - czyli granice przedziałów powinny mieć wartości _mniej więcej okrągłe_). 
+
+Kolejnym zagadnieniem, jest początek. Teoretycznie powinno się zacząć od minimum ale z punktu widzenia tworzenia przedziałów jest to niepraktyczne. W tym konkretnym wypadku sugeruję zacząc od _-1.5_ i dodawać kolejno _0.7_. Czyli granice naszych przedziałów to odpowiednio `r seq(-1.5, 10, 0.75)`. Pamiętajcie, że o ile nie jest to sprecyzowane inaczej to  przedziały są zawsze prawostronnie domknięte.
+
+Teraz pozostaje już tylko zliczyć liczbę wartośći w poszczególnych przedziałach i przedstawić ją jako szereg rozdzielczy.
+
+```{r echo=FALSE}
+library(dplyr)
+tabela = as.data.frame(table(cut(dane, breaks = seq(-1.5, 10, 0.75))))
+names(tabela) = c("Przedział", "$n_i$")
+knitr::kable(
+  tabela,
+  booktabs = TRUE,
+  caption = 'Szereg rozdzielczy'
+)
+
+```
+
+I tutaj kończy sie wstępna, nieco przydługa opowieść o tworzeniu szeregu rozdzielczego przedziałowego. Można ten szereg przedstawić za pomoca histogramu, obrazującego _rozkład empiryczny_ naszej zmiennej $A$
+
+```{r echo=FALSE}
+hist(dane, breaks  = seq(-1.5, 10, 0.75),
+     col = 2,
+     main  = "",
+     ylab = "Liczba przypadków",
+     xlab = "A")
+```
+
+Na osi _Y_ można również przedstawić udzial poszczeŋolnych przedziałów w postaci odsetka.
+
+```{r echo=FALSE}
+hist(dane, breaks  = seq(-1.5, 10, 0.75), prob = T,
+     col = 2,
+     main  = "",
+     ylab = "%",
+     xlab = "A")
+```
+
+Histogram nie musi mieć rozdziałów o takiej samej rozpiętości(liczy się w zasadzie pole powierzchni dla wersji z _gęstością prawdopodibieństwa_ na osi Y), aczkolwiek takowe sa najczęściaj stosowane. 
+
+Wykorzystując przygotowany szereg rozdzielczy przedziałowy można dokonać wstępnej analizy danych z wykorzystaniem podstawowych miar statystycznych tzw. Eksploracyjnej Analizy Danych (_Exploratory Data Analysis_). Pozwoli nam ona na wstępne zorientowanie się, co w trawie piszczy (typ rozkładu, obecność braków danych, obserwacji odstających, skośność, itp.), zanim weźmiemy zamach z wykorzystaniem bardziej sążnistych metod statystycznych. W przypadku złego uwarunkowania danych źrodłowych, zamach taki skończy się wyrwaniem ręki ze stawu i kiepskimi rokowaniami na poprawę. 
+
+CAŁĄ ANALIZĘ TRZEBA NIESTETY WYKONAĆ OD POCZĄTKU.
+
+## Wybrane wzory
+
+Średnia
+$$
+\bar{x}=\frac{1}{n}\sum\limits_{1}^{k}x_in_i
+$$
+gdzie:
+$x_i$ - środek przedziału
+$n_i$ - liczebność przedziału
+
+Dominanta
+$$
+D=x_0+\frac{{n_0}-{n_{-1}}}{(n_0-n_{-1})+(n_0-n_{+1})}c_0
+$$
+gdzie:
+
+$n_0$ - liczebność przedziału mody, $n_{-1}$ - liczebność przedziału poprzedzającego przedział mody, $n_{+1}$- liczebność przedziału następującego po przedziale mody, $x_0$ - dolna granica przedziału najliczniejszego,  $c_0$ - rozpiętość przedziału najliczniejszego
+
+Mediana
+$$
+Me=x_0+[0,5(n+1)-N_{x_{i-1}}]\frac{c_0}{n_0}
+$$
+gdzie:
+
+$x_0$ – dolna granica przedziału mediany, $n_0$ – liczebność przedziału mediany, $c_0$ – rozpiętość przedziału mediany, $N_{x_{i-1}}$ – liczebność szeregu skumulowanego do przedziału poprzedzającego ten, zawierający medianę
+
+Kwartyl 1 & 3 (oznaczenia symboli analogicznie do $Me$)
+
+$$
+Q1=x_0+[0,25(n+1)-N_{x_{i-1}}]\frac{c_0}{n_0}
+$$
+$$
+Q3=x_0+[0,75(n+1)-N_{x_{i-1}}]\frac{c_0}{n_0}
+$$ 
+
+### Miary dyspersji (klasyczne)
+
+Odchylenie standardowe
+$$
+s=\sqrt{\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^2n_i}{n-1}}
+$$
+
+Odchylenie przeciętne
+$$
+d=\frac{\sum\limits_{i=1}^{k}\left| x_i-\bar{x}\right|n_i}{n}
+$$
+
+Współczynnik zmienności
+$$
+V(d)=\frac{d}{\bar{x}}100
+$$
+
+### Miary dyspersji (pozycyjne)
+
+Rozstęp
+$$
+R=x_{max}-x_{min}
+$$
+
+Rozstęp decylowy
+$$
+R(D) = D_9-D_1
+$$
+
+Rozstęp kwartylowy (zwany również rozstępem międzykwartylowym)
+$$
+R(Q) = Q_3-Q_1
+$$
+
+Odchylenie ćwiartkowe
+$$
+Q = \frac{Q_3-Q_1}{2}
+$$
+
+### Miary asymetrii (klasyczne)
+Asymetria & Moment 3-ci względny 
+$$\mu_3=\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^3n_i}{n}$$ $$\alpha_3=\frac{\mu_3}{s^3}$$
+
+Wartośći dodatnie oznaczają asymetrię dodatnią, natomiast ujemne... no wiadomo jaką.
+
+Współczynnik asymetrii
+$$
+A(\bar{x})=\frac{\bar{x}-D}{s}
+$$
+
+### Miary asymetrii (pozycyjne)
+
+Współczynnik skośności (w oparciu o kwartyle)
+$$
+A(Q)=\frac{(Q_3-Me)-(Me-Q_1)}{Q_3-Q_1}=\frac{(Q_3-Me)-(Me-Q_1)}{(Q_3-Me)+(Me-Q_1)}
+$$
+
+Współczynnik skośności (w oparciu o decyle)
+$$
+A(D)=\frac{(D_9-Me)-(Me-D_1)}{D_9-D_1}=\frac{(D_9-Me)-(Me-D_1)}{(D_9-Me)+(Me-D_1)}
+$$
+
+### Miary spłaszczenia
+
+Nalezy bezwzględnie pamiętać, że spłaszczenie rozkładu jest w tym wypadku określane względem rozkładu normalnego. Rozkład _mezokurtyczny_ ma takie spłaszczenie jak rozkład Gauss'a, rozkład _platykurtyczny_ jest bardziej spłaszczony, natomiast _leptokurtyczny_ bardziej szpiczasty. Wartości 4-tego momentu względnego > 0 oznaczają większą koncentrację wartości wokół średniej (rozkład jest bardziej szpiczasty - _leptokurtyczny_). $\alpha_4<0$ wskazuje na spłaszczenie rokładu (_platykurtyczny_). Wartości w pobliżu 0 oznaczają rozkład _mezokurtyczny_ o spłaszczeniu tożsamym z rozkładem wzorcowym - w tym wypadku rozkładem Gauss'a (normalnym).
+
+Kurtoza & Moment 4-ty względny
+$$\mu_4=\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^4n_i}{n}$$ $$\alpha_4=\frac{\mu_4}{s^4}-3$$
+
+## Zadania
+[ĆWICZENIE 2](pdfs/cw2-szereg_rprzedzialowy.pdf)

@@ -1,0 +1,82 @@
+---
+title: "Metody statystyczne w hydrologii i klimatologii"
+author: "(07-MSHK-HMiK1-DU)"
+output: bookdown::gitbook
+site: bookdown::bookdown_site
+---
+
+# Wprowadzenie {-}
+
+Mark Twain stwierdził,
+
+> że są kłamstwa, 
+> cholerne kłamstwa
+> i statystyki
+
+Winston Churchil deklarował natomiast, że
+
+> wierzy jedynie w te statystyki,
+> które sam zmanipulował. 
+
+Frederick Mosteller:
+
+>"It is easy to lie with statistics; it is easier to lie without them."
+
+
+... przedmiot naszych dociekań w tym semestrze wydaje się być zatem niebanalny ...
+
+_Powodzenia!_
+
+
+
+*********
+
+## Kwestie organizacyjne {-}
+
+_Prowadzący_: dr Bartosz Czernecki*  (część atmosferyczna), 
+dr Monika Okońska (część hydrologiczna)
+
+email: nwp(at)o365.amu.edu.pl
+
+dyżur: czwartek 14:00
+
+strona: TODO 
+
+**********
+
+
+**********
+
+## Zalecana literatura {-}
+### Książki {-}
+1. Makać W., Urbanek-Krzysztofiak D., 2004. Metody opisu statystycznego, Wydawnictwo Uniwersytetu Gdańskiego, Gdańsk.
+2. Norcliffe G. B., 1986, Statystyka dla geografow, PWN, Warszawa.
+3. Łomnicki A., 2014, Wprowadzenie do statystyki dla przyrodników, PWN, Warszawa
+4. Balicki A., Makać W., 2007, Metody wnioskowania statystycznego, Wydawnictwo UG, Gdańsk, s.280
+
+### Zasoby WWW i pozostałe źródła: {-}
+  - [Biecek P., Ujawniać, objaśniać odkrywać](http://www.biecek.pl/Eseje/)
+  - [Internetowy podręcznik statystyki - STATSOFT](https://www.statsoft.pl/textbook/stathome.html)
+  - [Statistics 110 - Probability, Kurs Harvard University](https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo)
+  - [Elementarz programisty](https://nowosad.github.io/elp/), [R for Data Science](http://r4ds.had.co.nz/), [Efficient R programming](https://csgillespie.github.io/efficientR/), [Geocomputation with R](https://geocompr.robinlovelace.net/), [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/), [R Graphics Cookbook, 2nd edition](https://r-graphics.org/) - książki online
+- [Przewodnik po pakiecie R](http://www.biecek.pl/R/), [Programowanie w języku R](http://rksiazka.rexamine.com/), [Język R. Kompletny zestaw narzędzi dla analityków danych](https://helion.pl/ksiazki/jezyk-r-kompletny-zestaw-narzedzi-dla-analitykow-danych-hadley-wickham-garrett-grolemund,jezrko.htm#format/b), [Wydajne programowanie w R](https://helion.pl/ksiazki/wydajne-programowanie-w-r-praktyczny-przewodnik-po-lepszym-programowaniu-gillespie-colin-lovelace-robin,a_0491.htm#format/d) - polskie wydawnictwa,
+- [the R Journal](https://journal.r-project.org/)
+- [inne](http://cran.r-project.org/other-docs.html)
+- [dokumentacja ggplot2](http://docs.ggplot2.org/current/)
+- wyszukiwarki internetowe [Rseek](http://www.rseek.org/), [Duckduckgo](http://duckduckgo.com/), [Google](http://google.com/), [Bing](http://bing.com/), itd.
+- [twitter](https://twitter.com/hashtag/rstats?src=hash) - #rstats, #rspatial, #geocompr
+
+
+## Program zajęć: {-}
+
+- **R** jako podstawowe narzędzie
+- nacisk na praktykę = mniej teorii (*learning by doing*)
+
+1. Szybkie przypomnienie najważniejszych elementów niezbędnych do pracy z R (R, RStudio) + RMarkdown
+2. Typy danych i podstawowe statystyki opisowe
+3. Wizualizacje statystyczne
+4. Analiza korelacji
+5. Prawdopodobieństwo
+6. Rozkłady statystyczne
+7. Testowanie hipotez i wnioskowanie statystyczne
+8. Kolokwium końcowe - w formie zadań wykonywanych przy komputerach  

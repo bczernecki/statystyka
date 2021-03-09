@@ -1,0 +1,10 @@
+# Przykładowe zadania egzaminacyjne
+
+[NOWY ZESTAW PRZYKŁADOWYCH ZADAŃ](pdfs/Statystyka_zestaw_zadan.pdf)
+
+*************************
+Poniżej zamieszczono zestawy z poprzednich lat. Wkrótce pojawi się ich nowa wersja. 
+
+[ZESTAW 1](pdfs/WYKLADY-ZESTAW_ZADAN_1.pdf)
+[ZESTAW 2](pdfs/WYKLADY-ZESTAW_ZADAN_2.pdf)
+[ZESTAW 3](pdfs/WYKLADY-ZESTAW_ZADAN_3.pdf)

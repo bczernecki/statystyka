@@ -1,0 +1,9 @@
+# Analiza regresji
+
+## Podstawy teoretyczne - metoda najmniejszych kwadratów
+
+## Estymacja współczynników równania regresji prostej
+
+## Istotność statystyczna modelu
+
+## Analiza jakości modelu regresji

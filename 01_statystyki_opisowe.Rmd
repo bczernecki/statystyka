@@ -1,0 +1,134 @@
+# Statystyki opisowe
+
+## Skale pomiarowe (dane ilościowe)
+
+- **Skala ilorazowa** - skala, która posiada sens fizyczny dla różnic i ilorazów; ceny, wzrost
+
+- **Skala przedziałowa** - skala posiada sens fizyczny dla różnic, ale nie dla ilorazów; temperatura w stopniach Celcjusza, daty
+
+- **Skala porządkowa** - posiada fizyczny sens dla kolejności wartości; wzrost w kategoriach ("mały" < "średni" < "duży"), oceny
+
+- **Skala nominalna** - nie posiada fizycznego sensu dla dobranych wartości; kody pocztowe, numery telefonów
+
+
+
+## **Miary położenia (tendencji centralnej)**
+
+* średnia arytmetyczna (*mean*), 
+* mediana (*median*), 
+
+Mediana a średnia
+
+    w wypadku symetrycznego rozkładu te dwie cechy są równe
+    średnia jest bardziej wrażliwa na wartości odstające
+    mediana jest lepszą miarą środka danych, jeżeli są one skośne
+
+Po co używać średniej?
+
+    przydatniejsza w przypadku małych zbiorów danych
+    gdy rozkład danych jest symetryczny
+    (jednak) często warto podawać obie miary
+
+
+* dominanta (moda) (*table*),
+* kwantyle (kwartyle, decyle) (*quantile*)
+
+
+    kwantyle rzędu 1/100, 2/100,..., 99/100 to inaczej percentyle
+    percentyle dzielą dane na sto grup
+    n-ty percentyl to taka wartość, poniżej której znajduje się n procent danych
+    kwantyl rzędu 1/2 to mediana (pięćdziesiąty percentyl)
+    kwantyle rzędu 1/4, 2/4, 3/4 są kwartylami
+    mediana dolnej połowy danych, czyli dwudziesty piąty percentyl zwana jest         również pierwszym kwartylem (Q1)
+    mediana górnej połowy danych, czyli siedemdziesiąty piąty percentyl zwana jest     również trzecim kwartylem (Q3)
+
+
+
+## **Miary dyspersji ** 
+
+* odchylenie standardowe, (*sd*)
+
+
+    miara tego, jak daleko dane rozchodzą się od średniej
+    odchylenie standardowe jest pierwiastkiem z wariancji
+    jeżeli wartości są blisko średniej - SD będzie niewielkie
+    jeżeli wartości są daleko od średniej - SD będzie duże
+
+
+* odchylenie przeciętne / średnie odchylenie bezwzględne (*mad*),
+* wariancja, (*var*)
+
+
+    jednostkami wariancji jest kwadrat oryginalnej jednostki
+    
+    
+* współczynnik zmienności, (*sd/mean*)
+* rozstęp (*max - min*),
+
+Różnica pomiędzy wartościami skrajnymi w zbiorze. Nie są brane pod uwagę żadne inne wartości
+
+* rozstęp miedzykwartylowy (*IQR*)
+
+Różnica pomiędzy trzecim i pierwszym kwartylem to rozstęp kwartylny/odchylenie kwartylne/odchylenie ćwiartkowe (IQR. od ang. "interquartile range"), im większa szerokość rozstępu kwartylnego, tym większe zróżnicowanie cechy (IQR = Q3 - Q1)
+
+* rozstęp decylowy (Q90-Q10)
+
+## **Pozostałe użyteczne funkcje statystyczne**
+
+* (*summary*)
+* (*unique*)
+* (*table*)
+
+### Wybrane wzory {-}
+
+Średnia arytmetyczna
+$$
+\bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
+$$
+Odchylenie przeciętne
+$$
+V=\frac{1}{n}\sum\limits_{i=1}^{n}\left| x_i-\bar{x}\right|
+$$
+Współczynnik zmienności
+$$
+V = \frac{s}{\bar{x}}
+$$
+
+Wariancja (dla populacji generalnej)
+$$
+\sigma^2=\frac{\sum\limits_{i=1}^{n} (x_i-\mu)^2}{n}
+$$
+Wariancja (dla próby)
+$$
+s^2=\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^2}{n-1}
+$$
+Odchylenie standardowe (dla populacji)
+$$
+\sigma=\sqrt{\frac{\sum\limits_{i=1}^{n} (x_i-\mu)^2}{n}}
+$$
+Odchylenie standardowe (dla próby)
+$$
+s=\sqrt{\frac{\sum\limits_{i=1}^{n} (x_i-\bar{x})^2}{n-1}}
+$$
+
+*Zadanie 1*
+Wykorzystując zamieszczone poniżej dane oraz informacje przekazane przez prowadzącego uzupełnij poniższą tabelę.
+
+```
+12, 24, 9, 16, 12, 8, 6, 17, 11, 16, 21
+```
+
+Miara    | Wartość
+---------|---------
+$\bar{x}$|
+Kwartyl 1|
+Średnia  |
+Mediana  |
+Moda  |
+Dominanta  |
+Kwartyl 3|
+Współczynnik zmienności        |
+Odchylenie standardowe        |
+Wariancja        |
+Rozstęp międzykwartylowy      |
+Rozstęp decylowy      |
